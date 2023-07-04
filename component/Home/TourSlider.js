@@ -11,7 +11,12 @@ import duration from '@/assets/images/icon/duration.svg';
 import difficulty from '@/assets/images/icon/difficulty.svg';
 import activity from '@/assets/images/icon/activity.svg';
 import removeTags from '@/utils/removeTags';
-import { EqualHeight, EqualHeightElement } from 'react-equal-height';
+const EqualHeight = dynamic(() => import('react-equal-height').then(res=>res.EqualHeight), {
+  ssr: false,
+});
+const EqualHeightElement = dynamic(() => import('react-equal-height').then(res=>res.EqualHeightElement), {
+  ssr: false,
+});
 
 const options = {
     // autoplay: true,
