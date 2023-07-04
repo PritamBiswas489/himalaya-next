@@ -240,10 +240,19 @@ button{
         line-height: 77px;
         padding: 21px 80px 21px 20px;
         position: relative;
+        .rbt-input-main,
         .bannr-src-input{  
             background-color: transparent;
             border: none;
             box-shadow: none;
+        }
+        .rbt-menu{
+            .dropdown-item{
+                line-height: 2;
+                &:hover{
+                    color: $siteOrage;
+                }
+            }
         }
         .bannr-src-btn-wrap {
             position: absolute;
@@ -486,7 +495,7 @@ button{
             bottom: 0;
             width: 100%;
             z-index: 1;
-            transform: translate3d(0, 145px, 0);
+            transform: translate3d(0, 120px, 0);
             transition-duration: 0.35s;
             .popular-txt-top{
                 padding: 20px;
@@ -513,7 +522,7 @@ button{
                             align-items: center;
                             color: $white;
                             .popular-destination-info-img{
-                                max-width: 25px;
+                                max-width: 18px;
                                 display: inline-block;
                                 margin-right: 0.5rem;
                             }
@@ -576,15 +585,12 @@ button{
 .purple-badge-wrap {
     position: absolute;
     z-index: 2;
-    right: -24px;
-    top: -24px;
+    right: 15px;
+    top: 15px;
     background-color: $purple;
-    height: 100px;
-    width: 100px;
-    border-radius: 50px;
+    border-radius: 6px;
     color: #fff;
-    padding: 6px 28px;
-    line-height: 100px;
+    padding: 10px 15px;
     text-transform: capitalize;
     font-size: 14px;
     font-weight: 900;
@@ -592,15 +598,12 @@ button{
 .green-badge-wrap {
     position: absolute;
     z-index: 2;
-    right: -24px;
-    top: -24px;
+    right: 15px;
+    top: 15px;
     background-color: $green;
-    height: 100px;
-    width: 100px;
-    border-radius: 50px;
+    border-radius: 6px;
     color: #fff;
-    padding: 6px 28px;
-    line-height: 100px;
+    padding: 10px 15px;
     text-transform: capitalize;
     font-size: 14px;
     font-weight: 900;
@@ -1024,6 +1027,7 @@ button{
         flex: 1 0;
         ul{
             display: flex;
+            flex-wrap: wrap;
             li{
                 flex: 0 0 auto;
                 width: auto;

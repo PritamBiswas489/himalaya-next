@@ -42,23 +42,41 @@ const Footer = ({data}) => {
               <div className="col-lg-8 col-md-6 colsm-12 col-12">
                 <div className={`${style['footer-menu-list']} ${style['footer-box-heading']}`}>
                   <h5>Useful link:</h5>
-                  <ul className="d-flex flex-wrap row-cols-lg-3 row-cols-md-3 row-cols-sm-1 row-cols-1" >
-                    <li><Link href="#">DESTINATIONS</Link></li>
-                    <li><Link href="#">ACTIVITIES</Link></li>
-                    <li><Link href="#">STYLES</Link></li>
-                    <li><Link href="#">ABOUT US</Link></li>
-                    <li><Link href="#">CONTACT US</Link></li>
-                    <li><Link href="#">DESTINATIONS</Link></li>
-                    <li><Link href="#">ACTIVITIES</Link></li>
-                    <li><Link href="#">STYLES</Link></li>
-                    <li><Link href="#">ABOUT US</Link></li>
-                    <li><Link href="#">CONTACT US</Link></li>
-                    <li><Link href="#">DESTINATIONS</Link></li>
-                    <li><Link href="#">ACTIVITIES</Link></li>
-                    <li><Link href="#">STYLES</Link></li>
-                    <li><Link href="#">ABOUT US</Link></li>
-                    <li><Link href="#">CONTACT US</Link></li>
-                  </ul>
+                  <div className="row">
+                    <div className="col-lg-3 colmd-3 col-sm-12 col-12">
+                      <div className={`${style['footer-menu-list-box']}`}>
+                        <ul>
+                          <li><Link href="#">DESTINATIONS</Link></li>
+                          <li><Link href="#">ACTIVITIES</Link></li>
+                          <li><Link href="#">STYLES</Link></li>
+                          <li><Link href="#">ABOUT US</Link></li>
+                          <li><Link href="#">CONTACT US</Link></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="col-lg-3 colmd-3 col-sm-12 col-12">
+                      <div className={`${style['footer-menu-list-box']}`}>
+                        <ul>
+                          <li><Link href="#">DESTINATIONS</Link></li>
+                          <li><Link href="#">ACTIVITIES</Link></li>
+                          <li><Link href="#">STYLES</Link></li>
+                          <li><Link href="#">ABOUT US</Link></li>
+                          <li><Link href="#">CONTACT US</Link></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="col-lg-3 colmd-3 col-sm-12 col-12">
+                      <div className={`${style['footer-menu-list-box']}`}>
+                        <ul>
+                          <li><Link href="#">DESTINATIONS</Link></li>
+                          <li><Link href="#">ACTIVITIES</Link></li>
+                          <li><Link href="#">STYLES</Link></li>
+                          <li><Link href="#">ABOUT US</Link></li>
+                          <li><Link href="#">CONTACT US</Link></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="col-lg-2 col-md-3 colsm-12 col-12">
