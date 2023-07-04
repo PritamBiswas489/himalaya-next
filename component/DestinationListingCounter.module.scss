@@ -1,0 +1,58 @@
+@import '../assets/css/_variable.scss';
+.counter-wrap{
+    .destination-counter{
+        display: flex;
+        justify-content: space-between;
+        margin: 60px 0;
+        li{
+            flex: 0 0 140px;
+            max-width: 140px;
+            .count-number {
+                h3{
+                    color: $siteOrage;
+                    font-size: 60px;
+                    font-weight: 700;
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                    svg{
+                        font-size: 40px;
+                    }
+                }
+            }
+            h4{
+                font-size: 18px;
+                font-weight: 700;
+                color: $siteGrey;
+                text-transform: uppercase;
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// Responsive here Strt
+@media only screen and (max-width: 1440px) {
+    .counter-wrap{
+        .destination-counter{
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+            li{
+                .count-number {
+                    h3{
+                        font-size: 34px;
+                        svg{
+                            font-size: 22px;
+                        }
+                    }
+                }
+                h4{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+// Responsive here End

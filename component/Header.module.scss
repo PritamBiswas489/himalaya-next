@@ -51,7 +51,7 @@
     padding: 0.938rem 0;
     position: absolute;
     top: 0;
-    z-index: 2;
+    z-index: 3;
     &.scroll-on{
         position: fixed;
         top: 0;
@@ -130,6 +130,7 @@
             background-color: #fff;
             padding: 20px;
             ul{
+                width: 100%;
                 li{
                     margin: 0;
                     a{
@@ -141,6 +142,11 @@
                         text-transform: capitalize;
                         padding: 10px 8px;
                         border-radius: 5px;
+                        border: none;
+                        background: transparent;
+                        width: 100%;
+                        text-align: left;
+                        &.active,
                         &:hover{
                             background-color: #ececec;
                             color: #f97150;
@@ -424,7 +430,3 @@
 }
 
 // Responsive Here End
-
-  
-
-
