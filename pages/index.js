@@ -1,9 +1,11 @@
 'use client'
-import React , { Suspense } from 'react';
+import React , { Suspense, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 
  import styles from './loader.module.css';
-
+ if (typeof window !== 'undefined') {
+  window.$ = window.jQuery = require('jquery');
+}
 
 import { destinationApi } from '@/service/Destination.service';
 import { tourApi } from '@/service/Tour.service';
@@ -13,9 +15,7 @@ import { widgetsApi } from '@/service/Widgets.service';
 import { activityApi } from '@/service/Activity.service';
 import { menuApi } from '@/service/Menu.service';
 
-if (typeof window !== 'undefined') {
-	window.$ = window.jQuery = require('jquery');
-}
+
 const Header = dynamic(() => import('@/component/Header'));
 const Footer = dynamic(() => import('@/component/Footer'));
 
@@ -57,7 +57,11 @@ export async function getStaticProps(context) {
 
 export default function Home({home, destinationList,popularTourList,setting,reviewList,countdown,activityList,footerData,headerMenuData}) {
    
-  
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.$ = window.jQuery = require('jquery');
+    }
+  }, []);
   
   return (
     <>  
