@@ -59,7 +59,7 @@ function chunkArrayInGroups(arr, size) {
         <div className="container-fluid left-right-gap">
             <div className="row align-items-center justify-content-between">
                 <div className={`${style['logo']}`}>
-                    <Link href="index.html">
+                    <Link href={'/'}>
                         <img className="img-block" src={siteLogo.src} alt="" />
                     </Link>
                 </div>

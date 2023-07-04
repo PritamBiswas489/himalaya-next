@@ -1921,6 +1921,25 @@ button{
 }
 // Inner banner Page End
 
+// Front Dashboard Start
+.front-dashboard{
+    background-size: cover!important;
+    height: 204px;
+    position: relative;
+    z-index: 1;
+    &::after {
+        background: rgba(0,0,0,.56);
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
+}
+// Front Dashboard End
+
 
 
 
