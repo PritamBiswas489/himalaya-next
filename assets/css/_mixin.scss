@@ -1,0 +1,14 @@
+@mixin radisButton {
+    border-radius: 30px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 0 20px;
+    font-weight: 600;
+}
+@mixin transparentButton {
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 600;
+}

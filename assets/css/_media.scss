@@ -1,0 +1,178 @@
+@media only screen and (max-width: 2560px) {}
+
+@media only screen and (max-width: 1920px) {}
+
+@media only screen and (max-width: 1660px) {}
+
+@media only screen and (max-width: 1440px) {
+    .left-right-gap {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .home-banner-title {
+        h2 {
+            font-size: 85px;
+        }
+    }
+    .banner-src {
+        margin: 50px auto 0;
+    }
+    .tour-destination-wrap {
+        .tour-destination-box {
+            .destination-box-dtls {
+                .destination-name {
+                    h3 {
+                        font-size: 24px;
+                        margin-bottom: 0;
+                    }
+                }
+                .destination-text {
+                    transform: translate3d(0, -24px, 0);
+                    .mount-img {
+                        margin-bottom: 22px;
+                        img{
+                            width: 60px;
+                        }
+                    }
+                    h4 {
+                        font-size: 24px;
+                        margin-bottom: 4px;
+                    }
+                    .text-desc{
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+    .papular-package-one {
+        .papular-package-one-lft {
+            flex: 0 0 280px;
+            max-width: 280px;
+        }
+        .papular-package-one-rgt{
+            padding: 50px 20px 30px;
+            h3{
+                font-size: 17px;
+            }
+        }
+    }
+    .best-seller-round-box-wrap {
+        .best-seller-round-img {
+            height: 300px;
+            width: 300px;
+        }
+    }
+    .best-seller-wrap {
+        margin-top: -200px;
+    }
+    .trip-month {
+        img{
+            max-width: 230px;
+        }
+    }
+    .popular-destination-wrap {
+        .popular-destination-box {
+            .popular-destination-text {
+                .popular-txt-top {
+                    .popular-title {
+                        transform: translate3d(0, 60px, 0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    .papular-package-one {
+        .papular-package-one-lft {
+            flex: 0 0 220px;
+            max-width: 220px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1350px) {}
+
+@media only screen and (max-width: 1280px) {
+    .add-footer-pattern-gap {
+        padding-bottom: 9rem;
+    }
+    .best-seller-text {
+        padding: 37px 0 80px 0;
+        h3{
+            font-size: 24px;
+        }
+        .best-price-wrap {
+            h4{
+                font-size: 34px;
+            }
+            h2 {
+                font-size: 40px;
+            }
+        }
+        .destination-info-list-wrap {
+            li {
+                .destination-info-list-img {
+                    width: 35px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1204px) {}
+
+@media only screen and (max-width: 1135px) {
+    .best-seller-round-box-wrap {
+        .best-seller-round-img {
+            height: 250px;
+            width: 250px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {}
+
+@media only screen and (max-width: 1000px) {}
+
+@media only screen and (max-width: 991px) {}
+
+@media only screen and (max-width: 960px) {}
+
+@media only screen and (max-width: 910px) {}
+
+@media only screen and (max-width: 900px) {}
+
+@media only screen and (max-width: 885px) {}
+
+@media only screen and (max-width: 880px) {}
+
+@media only screen and (max-width: 800px) {}
+
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (max-width: 767px) {}
+
+@media only screen and (max-width: 736px) {}
+
+@media only screen and (max-width: 667px) {}
+
+@media only screen and (max-width: 600px) {}
+
+@media only screen and (max-width: 575px) {}
+
+@media only screen and (max-width: 545px) {}
+
+@media only screen and (max-width: 480px) {}
+
+@media only screen and (max-width: 414px) {}
+
+@media only screen and (max-width: 384px) {}
+
+@media only screen and (max-width: 375px) {}
+
+@media only screen and (max-width: 320px) {}
+
+@media only screen and (max-width: 240px) {}
