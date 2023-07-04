@@ -42,20 +42,22 @@
             margin-bottom: 22px;
         }
     }
-    ul{
-        li{
-            a{
-                color: #fff;
-                font-size: 12px;
-                font-weight: 500;
-                padding-top: 8px;
-                padding-bottom: 8px;
-                &:hover{
-                    color: #f97150;
+    .footer-menu-list-box{
+        ul{
+            li{
+                a{
+                    color: #fff;
+                    font-size: 12px;
+                    font-weight: 500;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    &:hover{
+                        color: #f97150;
+                    }
                 }
             }
         }
-    }
+    }    
 }
 .footer-contact {
     &.footer-box-heading{

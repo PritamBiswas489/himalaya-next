@@ -5,6 +5,9 @@ import { BsTelephoneFill } from "react-icons/bs";
 import { FaUserLarge } from "react-icons/fa6";
 import siteLogo from '@/assets/images/logo.png';
 import { FiArrowRight } from "react-icons/fi";
+
+import { RxDashboard } from 'react-icons/rx';
+import { RiLogoutBoxRLine } from 'react-icons/ri';
  
 import Link from 'next/link';
 
@@ -192,7 +195,25 @@ function chunkArrayInGroups(arr, size) {
                 <div className={`${style['account-area']}`}>
                     <ul className="d-flex align-items-center">
                         <li><a href="#"><BsTelephoneFill />{footer?.contact}</a></li>
-                        <li><a href="#"><FaUserLarge /></a></li>
+                        <li>
+                            <a href="#"><FaUserLarge /></a>
+                            <div className={`${style['after-login-menu-wrap']}`}>
+                                <ul>
+                                    <li>
+                                        <Link href="#">
+                                            <RxDashboard />
+                                            my dashboard
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="#">
+                                            <RiLogoutBoxRLine />
+                                            logout
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>

@@ -27,8 +27,9 @@ export default function HomeBannerComp({home}){
   const filterBy = () => true;
 
 
-      return (<section className="main-banner">
-      <Parallax bgImage={`${process.env.NEXT_PUBLIC_APP_HOST_IMAGE}image/homePage/banner/${home?.bannerImage}`} strength={500}>
+      return (
+      <section className="main-banner" style={{  backgroundImage: `url(${process.env.NEXT_PUBLIC_APP_HOST_IMAGE}image/homePage/banner/${home?.bannerImage})` }}>
+      {/* <Parallax bgImage={`${process.env.NEXT_PUBLIC_APP_HOST_IMAGE}image/homePage/banner/${home?.bannerImage}`} strength={100}> */}
         <div className="menu-top-gap home-banner d-flex align-items-center justify-content-center">
           <div className="banner-text-wrap">
             <div className="container">
@@ -43,7 +44,6 @@ export default function HomeBannerComp({home}){
       id="async-example"
       isLoading={isLoading}
       labelKey="title"
-     
       minLength={1}
       onSearch={handleSearch}
       options={options}
@@ -68,7 +68,7 @@ export default function HomeBannerComp({home}){
             </div>
           </div>
         </div>
-      </Parallax>
+      {/* </Parallax> */}
     </section>); 
 }
 
