@@ -5,6 +5,21 @@
 @media only screen and (max-width: 1660px) {}
 
 @media only screen and (max-width: 1440px) {
+    .popular-destination-wrap {
+        .popular-destination-box{
+            .popular-destination-text {
+                .popular-txt-top{
+                    .after-hover{
+                        .popular-destination-info {
+                            li{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     .left-right-gap {
         padding-left: 50px;
         padding-right: 50px;
