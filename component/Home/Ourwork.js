@@ -24,7 +24,7 @@ export default function OurWork(props) {
             </div>
             <div className="row g-3">
             {props.activityList.map((element, index) => (
-              <div className="col-xxl-3 col-lg-4 col-md-6 col-sm-6 col-12" key={index}>
+              <div className="col-xxl-3 col-lg-3 col-md-6 col-sm-6 col-12" key={index}>
                 <div className="activity-wrap">
                   <Link href={`${process.env.REACT_APP_URL}activity/${element.slug}`} className="activity-box">
                     <span className="activity-box-img">

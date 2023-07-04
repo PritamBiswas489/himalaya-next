@@ -68,7 +68,7 @@ export default function TourSlider(props){
                 <h5>USD 1,258</h5>
               </div>
             </div>
-            <EqualHeightElement name="Name">
+            <EqualHeightElement name="samebox">
               <div className="papular-package-two-desc">
                 <h3><Link href="#">{element.tour_details.title}</Link></h3>
                 <div className="package-two">{removeTags(element.tour_details.description).slice(0, 165)}</div>

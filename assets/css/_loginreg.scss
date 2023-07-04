@@ -1,0 +1,93 @@
+.loginreg-page{
+    min-height: 100vh;
+    .loginreg-page-wrap{
+        background: rgba(255, 255, 255, 0.9);
+        padding: 65px;
+        border-radius: 16px;
+        backdrop-filter: blur(2px);
+        .log-reg-logo{
+            display: block;
+            max-width: 150px;
+            margin: 0 auto 30px;
+        }
+        h2{
+            font-size: 40px;
+            color: $siteGrey;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        .log-reg-text{
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .submit-wrap {
+            .orange-btn{
+                border: none;
+                box-shadow: none;
+                width: 100%;
+            }
+        }
+    }
+}
+.log-reg-input{
+    margin-bottom: 16px;
+   .log-reg-input-style{
+    height: 50px;
+    border-color: #999;
+    background-color: transparent;
+   }
+}
+.logreg-lbl{
+    display: block;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+.forget-pass {
+    margin-bottom: 16px;
+    a{
+        font-size: 1rem;
+        color: $siteGrey;
+        font-weight: 500;
+    }
+}
+.loginreg-page-footer-gap{
+    padding-bottom: 110px;
+}
+.reg-chk{
+    .checkbox {
+        input[type="checkbox"]{
+            +{
+                label{
+                    padding-left: 10px;
+                    &::before{
+                        width: 22px;
+                        height: 22px;
+                        border: 2px solid #d7d7d7;
+                    }
+                    &::after{
+                        width: 22px;
+                        height: 22px;
+                        line-height: 22px;
+                        padding-left: 0;
+                        padding-top: 0;
+                        font-size: 14px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+.alrdy-member-wrap {
+    margin-top: 16px;
+    a{
+        background: #f6f6f6;
+        border: 1px solid #f97150;
+        border-radius: 30px;
+        color: #333;
+        font-weight: 700;
+        padding: 6px 10px;
+        text-align: center;
+        width: 100%;
+    }
+}

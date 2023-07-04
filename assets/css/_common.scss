@@ -180,6 +180,21 @@ button{
 .menu-top-gap {
     padding-top: 104px;
 }
+.quantity-control {
+    input[type=number]{
+        -moz-appearance: textfield;
+        appearance: textfield;
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button{
+            -moz-appearance: none;
+            -ms-appearance: none;
+            -o-appearance: none;
+            -webkit-appearance: none; 
+            appearance: none;
+            margin: 0; 
+        }
+    }
+}
 /*--Sortcode-css Start---*/
 
 
@@ -741,7 +756,8 @@ button{
         }
         h3{
             transition: all ease-in-out 0.5s;
-            font-size: 30px;
+            // font-size: 30px;
+            font-size: 20px;
             color: $siteGrey;
         }
         .activity-count{

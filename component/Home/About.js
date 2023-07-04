@@ -34,7 +34,7 @@ const options1 = {
       items: 1,
       animateOut: false,
     },
-    1400: {
+    1200: {
       items: 2,
     },
   },
@@ -53,7 +53,7 @@ export default function About(props) {
       <section className="home-about-sec home-about-bg">
         <div className="container-fluid left-right-gap">
           <div className="row">
-            <div className="col-lg-7 col-md-7 col-sm-12 col-12">
+            <div className="col-xxl-7 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="section-heading section-heading-lft">
                 <h4
                   dangerouslySetInnerHTML={{ __html: props.home?.aboutusTitle }}
@@ -131,7 +131,7 @@ export default function About(props) {
                 </div>
               </div>
             </div>
-            <div className="col-lg-5 col-md-5 col-sm-12 col-12">
+            <div className="col-xxl-5 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="about-box-slider">
                 {props.home.get_featured_card ? (
                   <OwlCarousel
