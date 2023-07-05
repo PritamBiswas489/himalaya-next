@@ -1,0 +1,7 @@
+git add .
+git commit -m "pritam dev -04-07-20230-4"
+git push origin pritam_dev
+
+
+
+git pull origin kartick_dev

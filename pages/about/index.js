@@ -20,20 +20,20 @@ import AboutCounter from '@/component/AboutCounter';
 import Link from 'next/link';
 
 // Mission Vission
-import missin from '../../assets/images/about/1.png';
-import vissin from '../../assets/images/about/2.png';
-import abtImg1 from '../../assets/images/about/abtImg1.jpg';
-import abtImg2 from '../../assets/images/about/abtImg2.jpg';
-import abtImg3 from '../../assets/images/about/abtImg3.jpg';
+import missin from '@/assets/images/about/1.png';
+import vissin from '@/assets/images/about/2.png';
+import abtImg1 from '@/assets/images/about/abtimg1.jpg';
+import abtImg2 from '@/assets/images/about/abtimg2.jpg';
+import abtImg3 from '@/assets/images/about/abtimg3.jpg';
 
 // Service
-import serviceImg1 from '../../assets/images/about/service1.png';
-import serviceImg2 from '../../assets/images/about/service2.png';
-import serviceImg3 from '../../assets/images/about/service3.png';
-import serviceImg4 from '../../assets/images/about/service4.png';
+import serviceImg1 from '@/assets/images/about/service1.png';
+import serviceImg2 from '@/assets/images/about/service2.png';
+import serviceImg3 from '@/assets/images/about/service3.png';
+import serviceImg4 from '@/assets/images/about/service4.png';
 
 // Activity
-import activityIcon from '../../assets/images/icon/icon-6.png';
+import activityIcon from '@/assets/images/icon/icon-6.png';
 
 // Avatar Image
 import avatarImage from '@/assets/images/avatar/1.jpg';
@@ -42,11 +42,11 @@ import tripadvisorIcon from '@/assets/images/icon/tripadvisor.png';
 import googleIcon from '@/assets/images/icon/google.png';
 
 // Member Slider
-import memberImg1 from '../../assets/images/about/member/member-img1.png';
-import memberImg2 from '../../assets/images/about/member/member-img2.png';
-import memberImg3 from '../../assets/images/about/member/member-img3.png';
-import memberImg4 from '../../assets/images/about/member/member-img4.png';
-import memberImg5 from '../../assets/images/about/member/member-img5.png';
+import memberImg1 from '@/assets/images/about/member/member-img1.png';
+import memberImg2 from '@/assets/images/about/member/member-img2.png';
+import memberImg3 from '@/assets/images/about/member/member-img3.png';
+import memberImg4 from '@/assets/images/about/member/member-img4.png';
+import memberImg5 from '@/assets/images/about/member/member-img5.png';
 
 // React Font Icon
 // import { FaShareNodes } from "react-icons/fa6";
