@@ -15,6 +15,9 @@ import Link from 'next/link';
 import { RxDashboard } from 'react-icons/rx';
 import { AiFillEdit } from "react-icons/ai";
 import { RiLockPasswordLine, RiLogoutBoxRLine } from 'react-icons/ri';
+import { FaEnvelope, FaPhone } from 'react-icons/fa6';
+import { BsClipboardCheck, BsStar } from 'react-icons/bs';
+import { FiEdit } from 'react-icons/fi';
 
 export async function getStaticProps(context) {
     
@@ -52,8 +55,8 @@ export default function dashboardPage({footerData,headerMenuData}) {
                           <div className="front-dashboard-menu-box">
                             <h5>Tour Booking</h5>
                             <ul>
-                              <li><Link href="#"><RxDashboard />My Bookings</Link></li>
-                              <li><Link href="#"><AiFillEdit />Reviews</Link></li>
+                              <li><Link href="#"><BsClipboardCheck />My Bookings</Link></li>
+                              <li><Link href="#"><BsStar />Reviews</Link></li>
                             </ul>
                           </div>
                           <div className="front-dashboard-menu-box">
@@ -64,12 +67,69 @@ export default function dashboardPage({footerData,headerMenuData}) {
                           <div className="front-dashboard-need-help">
                             <h5>Need Help?</h5>
                             <ul>
-                              <li><Link href="#"><RiLogoutBoxRLine />Sign Out</Link></li>
+                              <li><Link href="#"><FaPhone />+91 9865321012</Link></li>
+                              <li><Link href="#"><FaEnvelope />Info@HimalayanLeisure.Com</Link></li>
                             </ul>
                           </div>
                         </div>
                       </div>
-                      <div className="front-dashboard-wrap-rgt">dashboard</div>
+                      <div className="front-dashboard-wrap-rgt">
+                        <div className="dasboard-bedcrumb">
+                          <ul>
+                            <li><Link href="#"><RxDashboard />Dashboard</Link></li>
+                            <li>Dashboard</li>
+                          </ul>
+                        </div>
+                        <div className="front-dashboard-rgt-base">
+                          <div className="front-dashboard-base-head">
+                            <div className="dashboard-base-head-lft">
+                              <h5>My Profile</h5>
+                            </div>
+                            <div className="dashboard-base-head-rgt">
+                              <Link href="#"><FiEdit />edit profile</Link>
+                            </div>
+                          </div>
+                          <div className="front-dashboard-base-body">
+                            <div className="dashboard-profile-wrap">
+                              <div className="dashboard-profile-wrap-lft">
+                                <span className="profile-image">
+                                  <img className="img-block" src="https://achishayari.com/wp-content/uploads/2023/04/Cute-DP-Image.webp" alt="" />
+                                </span>
+                              </div>
+                              <div className="dashboard-profile-wrap-rgt">
+                                <div className="profile-dtls">
+                                  <ul>
+                                    <li>
+                                      <div className="profile-dtls-title">Name</div>
+                                      <div className="profile-dtls-info">pritam biswas</div>
+                                    </li>
+                                    <li>
+                                      <div className="profile-dtls-title">Gender</div>
+                                      <div className="profile-dtls-info">Male</div>
+                                    </li>
+                                    <li>
+                                      <div className="profile-dtls-title">Birth Date</div>
+                                      <div className="profile-dtls-info">6/22/2023</div>
+                                    </li>
+                                    <li>
+                                      <div className="profile-dtls-title">Country</div>
+                                      <div className="profile-dtls-info">India</div>
+                                    </li>
+                                    <li>
+                                      <div className="profile-dtls-title">Email</div>
+                                      <div className="profile-dtls-info">pritam.biswas489@gmail.com</div>
+                                    </li>
+                                    <li>
+                                      <div className="profile-dtls-title">Phone</div>
+                                      <div className="profile-dtls-info">1234567890</div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                 </div>
             </section>
