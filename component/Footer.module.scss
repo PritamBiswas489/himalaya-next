@@ -184,3 +184,16 @@
 .ftr-btm {
     padding: 15px 0;
 }
+
+//====================================================================
+
+
+
+// ========================Responsive Here Start
+@media only screen and (max-width: 1204px){
+    .footer-about{
+        .footer-logo{
+            width: 120px;
+        }
+    }
+}
