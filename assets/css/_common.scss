@@ -1945,6 +1945,54 @@ button{
         z-index: -1;
     }
 }
+.front-dashboard-wrap {
+    display: flex;
+    .front-dashboard-wrap-lft{
+        flex: 0 0 250px;
+        max-width: 250px;
+        background: #fff;
+        box-shadow: 15px 0 30px -20px rgba(0,0,0,.1);
+        padding: 40px 0;
+    }
+    .front-dashboard-wrap-rgt{
+        flex: 1 0;
+    }
+}
+.front-dashboard-menu{
+    .front-dashboard-menu-box{
+        h5{
+            padding: 8px 15px;
+        }
+        ul{
+            li{
+                a{
+                    padding: 12px 15px;
+                    color: $siteGrey;
+                    display: flex;
+                    align-items: center;
+                    font-weight: 500;
+                    svg{
+                        margin-right: 8px;
+                        fill: $siteOrage;
+                        color: $siteOrage;
+                    }
+                    &:hover{
+                        background-color: #ececec;
+                        color: $siteOrage;
+                    }
+                }
+            }
+            &.dasboard-logout{
+                li{
+                    a{
+                        font-weight: 700;
+                        background-color: #f3f3f3;
+                    }
+                }
+            }
+        }
+    }
+}
 // Front Dashboard End
 
 
