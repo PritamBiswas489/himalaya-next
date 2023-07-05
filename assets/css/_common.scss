@@ -239,13 +239,14 @@ button{
         color: $siteOrage;
         line-height: 1;
         padding-bottom: 0;
+        text-align: center;
     }
 }
 .banner-text-wrap {
     position: relative;
 }
 .banner-src {
-    max-width: 806px;
+    width: 806px;
     margin: 115px auto 0;
     .bannr-src-box {
         background-color: $white;
@@ -331,7 +332,7 @@ button{
                 transition-duration: 0.35s;
                 transform: translate3d(0, 145px, 0);
                 h3{
-                    font-size: 40px;
+                    font-size: 32px;
                     color: $white;
                     text-transform: uppercase;
                     padding-bottom: 8px;
@@ -759,6 +760,7 @@ button{
             // font-size: 30px;
             font-size: 20px;
             color: $siteGrey;
+            margin-bottom: 0;
         }
         .activity-count{
             color: $siteGrey;
@@ -824,6 +826,7 @@ button{
     padding: 10px 0 10px 20px;
     h6 {
         padding-bottom: 5px;
+        margin-bottom: 0;
         color: $white;
         font-size: 14px;
         font-weight: 400;
@@ -831,6 +834,7 @@ button{
     }
     h5 {
         padding-bottom: 0;
+        margin-bottom: 0;
         color: #fff;
         font-size: 20px;
         font-weight: 700;
@@ -862,6 +866,7 @@ button{
         border-radius: 0 10px 10px 0;
         background-color: $white;
         h3{
+            font-size: 22px;
             a{
                 color: $black;
                 &:hover{
@@ -963,7 +968,7 @@ button{
     .papular-package-two-desc{
         padding: 20px;
         h3{
-            font-size: 20px;
+            font-size: 18px;
             a{
                 color: $black;
                 &:hover{
@@ -1383,8 +1388,10 @@ button{
     }
     .client-say-text{
         padding-top: 30px;
-        p{
+        .client-say-desc {
             font-size: 14px;
+            height: 120px;
+            overflow-y: auto;
         }
         .review-wrap{
             justify-content: space-between;

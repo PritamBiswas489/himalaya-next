@@ -196,7 +196,7 @@ function chunkArrayInGroups(arr, size) {
                     <ul className="d-flex align-items-center">
                         <li><a href="#"><BsTelephoneFill />{footer?.contact}</a></li>
                         <li>
-                            <a href="#"><FaUserLarge /></a>
+                            <a href="javascript:;"><FaUserLarge /></a>
                             <div className={`${style['after-login-menu-wrap']}`}>
                                 <ul>
                                     <li>

@@ -24,8 +24,8 @@ const Footer = ({data}) => {
     <>
         <footer className={`${style['footer-section']} ${style['footer-pattern']}`}>
           <div className={`container-fluid ${style['left-right-gap']}`}>
-            <div className="row">
-              <div className="col-lg-2 col-md-3 colsm-12 col-12">
+            <div className="row g-3">
+              <div className="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
                 <div className={`${style['footer-about']}`}>
                     <span className={`${style['footer-logo']}`}>
                      
@@ -39,11 +39,11 @@ const Footer = ({data}) => {
                     </span>
                 </div>
               </div>
-              <div className="col-lg-8 col-md-6 colsm-12 col-12">
+              <div className="col-xl-8 col-lg-7 col-md-12 col-sm-12 col-12">
                 <div className={`${style['footer-menu-list']} ${style['footer-box-heading']}`}>
                   <h5>Useful link:</h5>
                   <div className="row">
-                    <div className="col-lg-3 colmd-3 col-sm-12 col-12">
+                    <div className="col-lg-4 col-md-4 col-sm-4 col-4">
                       <div className={`${style['footer-menu-list-box']}`}>
                         <ul>
                           <li><Link href="#">DESTINATIONS</Link></li>
@@ -54,7 +54,7 @@ const Footer = ({data}) => {
                         </ul>
                       </div>
                     </div>
-                    <div className="col-lg-3 colmd-3 col-sm-12 col-12">
+                    <div className="col-lg-4 col-md-4 col-sm-4 col-4">
                       <div className={`${style['footer-menu-list-box']}`}>
                         <ul>
                           <li><Link href="#">DESTINATIONS</Link></li>
@@ -65,7 +65,7 @@ const Footer = ({data}) => {
                         </ul>
                       </div>
                     </div>
-                    <div className="col-lg-3 colmd-3 col-sm-12 col-12">
+                    <div className="col-lg-4 col-md-4 col-sm-4 col-4">
                       <div className={`${style['footer-menu-list-box']}`}>
                         <ul>
                           <li><Link href="#">DESTINATIONS</Link></li>
@@ -79,7 +79,7 @@ const Footer = ({data}) => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-2 col-md-3 colsm-12 col-12">
+              <div className="col-xl-2 col-lg-3 col-md-12 col-sm-12 col-12">
                 <div className={`${style['footer-contact']} ${style['footer-box-heading']}`}>
                   <h5>Contact</h5>
                   <div className={`${style['addrss-text']}`}>Zertyb Music Acaademy <br></br> 1st floor Millbank Tower, <br></br> 21-24 Millbank, <br></br> London, SW1P 4QP</div>
@@ -91,8 +91,8 @@ const Footer = ({data}) => {
               </div>
             </div>
             <div className={`${style['ftr-middle']}`}>
-              <div className="row">
-                <div className="col-lg-2 col-md-3 colsm-12 col-12">
+              <div className="row g-3">
+                <div className="col-lg-2 col-md-3 col-sm-8 col-12">
                   <div className={`${style['footer-social']} ${style['footer-box-heading']}`}>
                       <h5>Follow Us:</h5>
                       <ul className="d-flex justify-content-between">
@@ -103,13 +103,13 @@ const Footer = ({data}) => {
                       </ul>
                   </div>
                 </div>
-                <div className="col-lg-8 col-md-6 colsm-12 col-12">
+                <div className="col-lg-8 col-md-6 col-sm-12 col-12">
                   <div className={`${style['footer-newsletter']} ${style['footer-box-heading']}`}>
                       <h5>News letter</h5>
                       <div className={`${style['letter-text']}`}>Receive regular updates on our latest news, favourite trips, trip reports and inspiration for your next adventure</div>
                   </div>
                 </div>
-                <div className="col-lg-2 col-md-3 colsm-12 col-12">
+                <div className="col-lg-2 col-md-3 col-sm-12 col-12">
                   <div className={`${style['footer-newsletter-subscribe']}`}>
                     <Link href="#" className={`${style['orange-btn']}`}>Subscribe</Link>
                   </div>
@@ -117,7 +117,7 @@ const Footer = ({data}) => {
               </div>
             </div>
             <div className={`${style['ftr-btm']}`}>
-              <div className="row justify-content-between">
+              <div className="row g-3 justify-content-between">
                 <div className="col-auto">
                   <div className={`d-flex align-items-center ${style['footer-member']} ${style['footer-box-heading']}`}>
                       <h5>We are Proud Member of:</h5>
@@ -143,7 +143,7 @@ const Footer = ({data}) => {
               </div>
             </div>
             <div className={`${style['ftr-btmcopyright']}`}>
-              <div className="row align-items-center justify-content-between">
+              <div className="row g-3 align-items-center justify-content-between">
                 <div className="col-auto">
                   <div className={`${style['footer-copy-right']}`}>
                       <div className={`${style['copyrgt-text']}`}>© 2022 by Himalayan Leisure inc Pvt Ltd by Aqualeaf It Solution Pvt. Ltd.</div>

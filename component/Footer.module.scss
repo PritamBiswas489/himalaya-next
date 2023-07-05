@@ -25,7 +25,8 @@
 .footer-about{
     .footer-logo{
         display: block;
-        width: 160px;
+        max-width: 160px;
+        width: 100%;
     }
 }
 .footer-box-heading{
@@ -193,7 +194,28 @@
 @media only screen and (max-width: 1204px){
     .footer-about{
         .footer-logo{
-            width: 120px;
+            max-width: 120px;
+        }
+    }
+}
+@media only screen and (max-width: 767px){
+    .left-right-gap{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .footer-section {
+        padding-top: 30px;
+    }
+}
+@media only screen and (max-width: 575px){
+    .ftr-btm{
+        .footer-bank,
+        .footer-member{
+            flex-wrap: wrap;
+            ul{
+                margin-top: 15px;
+                width: 100%;
+            }
         }
     }
 }

@@ -101,7 +101,7 @@
         backdrop-filter: blur(5px);
         .logo{
             a{
-                max-width: 80px;
+                max-width: 90px;
             }
         }
         .front-hamburger-wrap{
@@ -432,7 +432,8 @@
     min-width: 100%;
     .submenu-wrap{
         flex-wrap: wrap;
-        max-height: calc(100vh - 278px);
+        // max-height: calc(100vh - 278px);
+        max-height: calc(100vh - 100px);
         overflow-x: auto;
         .submenu-wrap-lft{
             flex: 0 0 100%;
@@ -442,7 +443,20 @@
         .submenu-wrap-rgt {
             flex: 0 0 100%;
             max-width: 100%;
-            background-color: #f6f6f6;
+            background-color: #ebebeb;
+            position: relative;
+            &::before{
+                content: "";
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: -20px;
+                width: 0;
+                height: 0;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+                border-bottom: 20px solid #ebebeb;
+            }
         }
     }
     }
@@ -468,6 +482,171 @@
             }
         }
     }
+}
+@media only screen and (max-width: 991px){
+    .account-area {
+        flex: 0 0 280px;
+        max-width: 280px;
+        padding-right: 40px;
+    }
+}
+@media only screen and (max-width: 767px){
+    .left-right-gap {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .logo {
+        flex: 0 0 120px;
+        max-width: 120px;
+        a{
+            max-width: 100px;
+        }
+    }
+    .front-hamburger-wrap{
+        top: 35px;
+    }
+}
+
+
+@media only screen and (max-width: 575px){
+    .logo {
+        flex: 0 0 120px;
+        max-width: 120px;
+        a{
+            max-width: 90px;
+        }
+    }
+    .front-hamburger-wrap {
+        top: 32px;     
+    }
+    .main-header {
+        &.scroll-on{
+            .logo{
+                a{
+                    max-width: 80px;
+                }
+            }
+            .front-hamburger-wrap{
+                top: 30px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 480px){
+    .logo {
+        flex: 0 0 90px;
+        max-width: 90px;
+        a{
+            max-width: 70px;
+        }
+    }
+    .front-hamburger-wrap {
+        top: 28px;     
+    }
+    .main-header {
+        &.scroll-on{
+            .logo{
+                a{
+                    max-width: 60px;
+                }
+            }
+            .front-hamburger-wrap{
+                top: 26px;
+            }
+        }
+    }
+    .account-area {
+        flex: 0 0 240px;
+        max-width: 240px;
+        padding-right: 35px;
+        ul{
+            li{
+                a{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .navigation{
+        width: 300px;
+    }
+    .submenu-wrap-big{
+        .submenu-wrap{
+            .submenu-wrap-rgt {
+                .plan-tripwrap{
+                    .orange-btn{
+                        height: auto;
+                        line-height: 1.5;
+                        padding: 13px 20px;
+                        text-align: center;
+                        svg{
+                            margin-left: 8px;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .nepal-tour-menu{
+        padding-top: 40px;    
+        .nepal-tour-menu-wrap-box{
+            flex-wrap: wrap;
+            .nepal-tour-menu-lft,
+            .nepal-tour-menu-rgt{
+                flex: 0 0 100%;
+                max-width: 100%;
+                +{
+                    .nepal-tour-menu-lft,
+                    .nepal-tour-menu-rgt{
+                        margin-top: 20px;
+                    }
+                }
+            }
+            +{
+                .nepal-tour-menu-wrap-box{
+                    margin-top: 20px;
+                }
+            }
+        }    
+    }
+}
+@media only screen and (max-width: 414px) {
+    .account-area {
+        flex: 0 0 215px;
+        max-width: 215px;
+        padding-right: 23px;
+        ul{
+            li{
+                &:not(:last-child){
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+    .logo {
+        flex: 0 0 75px;
+        max-width: 75px;
+        a{
+            max-width: 70px;
+        }
+    }
+    .front-hamburger-wrap {
+        top: 24px;     
+    }
+    .main-header {
+        &.scroll-on{
+            .logo{
+                a{
+                    max-width: 70px;
+                }
+            }
+            .front-hamburger-wrap{
+                top: 24px;
+            }
+        }
+    }
+    
 }
 
 // Responsive Here End

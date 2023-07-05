@@ -151,7 +151,7 @@
                 font-size: 34px;
             }
             h2 {
-                font-size: 40px;
+                font-size: 30px;
             }
         }
         .destination-info-list-wrap {
@@ -164,7 +164,15 @@
     }
 }
 
-@media only screen and (max-width: 1204px) {}
+@media only screen and (max-width: 1204px) {
+    .as-recomended {
+        flex-wrap: wrap;
+        .as-recomended-heading{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
 
 @media only screen and (max-width: 1135px) {
     .best-seller-round-box-wrap {
@@ -179,7 +187,34 @@
 
 @media only screen and (max-width: 1000px) {}
 
-@media only screen and (max-width: 991px) {}
+@media only screen and (max-width: 991px) {
+    .best-seller-wrap {
+        margin-top: -150px;
+    }
+    .best-seller-round-box-wrap {
+        .best-seller-round-img {
+            height: 200px;
+            width: 200px;
+            img{
+                border: 10px solid #fff;
+            }
+        }
+    }
+    .main-banner {
+        height: 600px;
+    }
+    .home-banner {
+        height: 600px;
+    }
+    .home-banner-title {
+        h2 {
+            font-size: 50px;
+        }
+    }
+    .banner-src {
+        width: 600px;
+    }
+}
 
 @media only screen and (max-width: 960px) {}
 
@@ -193,21 +228,212 @@
 
 @media only screen and (max-width: 800px) {}
 
-@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 768px) { }
 
-@media only screen and (max-width: 767px) {}
+@media only screen and (max-width: 767px) {
+    .left-right-gap {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .best-seller-wrap {
+        margin-top: -125px;
+    }
+    .best-seller-round-box-wrap {
+        .best-seller-round-img {
+            height: 165px;
+            width: 165px;
+        }
+    }
+    .home-banner-title {
+        h2 {
+            font-size: 40px;
+        }
+    }
+    .banner-src {
+        width: 500px;
+    }
+    .destination-info-dtls {
+        h4 {
+            font-size: 20px;
+        }
+        h3{
+            font-size: 24px;
+        }
+    }
+    .section-heading {
+        margin-bottom: 15px;
+        h4 {
+            font-size: 20px;
+            margin-bottom: 0;
+        }
+        h3{
+            font-size: 24px;
+        }
+    }
+    .home-destination-sec {
+        padding: 20px 0 40px 0;
+    }
+    .home-popular-section {
+        padding: 40px 0;
+    }
+    .home-activity-sec {
+        .parallax-wrap {
+            padding: 40px 0;
+        }
+    }
+    .activity-wrap {
+        .activity-box {
+            h3 {
+                font-size: 18px;;
+            }
+        }
+    }
+    .package-parallax-wrap {
+        padding: 40px 0;
+    }
+    .home-about-sec {
+        padding: 40px 0;
+    }
+    .best-seller-text {
+        padding: 0 0 40px 0;
+    }
+    .tour-destination-wrap {
+        .tour-destination-box {
+            .destination-box-dtls {
+                .destination-name {
+                    transform: translate3d(0, 85px, 0);
+                }
+            }
+        }
+    }
+    .best-seller-text {
+        .destination-info-list-wrap{
+            li{
+                .destination-info-list-img {
+                    width: 30px;
+                }
+            }
+        }
+    }
+}
 
 @media only screen and (max-width: 736px) {}
 
 @media only screen and (max-width: 667px) {}
 
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 600px) {
+    .papular-package-one {
+        flex-wrap: wrap;
+        .papular-package-one-lft {
+            flex: 0 0 100%;
+            max-width: 100%;
+            .papular-package-one-img{
+                border-radius: 10px 10px 0 0;
+            }
+        }
+        .papular-package-one-rgt{
+            border-radius: 0 0 10px 10px;
+        }
+    }
+}
 
-@media only screen and (max-width: 575px) {}
+@media only screen and (max-width: 575px) {   
+    .review-wrap {
+        li {
+            font-size: 14px;
+        } 
+    }
+    .destination-info-list-wrap {
+        li{
+            .destination-info-list-img {
+                width: 20px;
+            }
+        }
+    }
+    .as-recomended {
+        .as-recomended-logo {
+            ul{
+                li{
+                    &:not(:last-child) {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .best-seller-wrap {
+        margin-top: -100px;
+    }
+    .best-seller-round-box-wrap {
+        .best-seller-round-img {
+            height: 150px;
+            width: 150px;
+        }
+    }
+    .best-seller-sec {
+        .parallax-wrap {
+            padding-bottom: 0;
+            height: 350px;
+        }
+    }
+    .best-seller-text {
+        .best-price-wrap {
+            h2 {
+                font-size: 20px;
+            }
+        }
+        .destination-info-list-wrap {
+            li {
+                font-size: 18px;
+            }
+        }
+    }
+    .trip-month {
+        img {
+            max-width: 145px;
+        }
+    }
+    .banner-src {
+        width: 400px;
+    }
+    .destination-brick{
+        >[class*="col-"]{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            &:nth-child(2){
+                margin-top: 0px;
+            }
+            &:nth-child(3){
+                margin-top: 0px;
+            }
+            &:nth-child(4){
+                margin-top: 0px;
+            }
+        }
+    }
+}
 
 @media only screen and (max-width: 545px) {}
 
-@media only screen and (max-width: 480px) {}
+@media only screen and (max-width: 480px) {
+    .best-seller-wrap {
+        margin-top: -90px;
+    }
+    .best-seller-round-box-wrap {
+        .best-seller-round-img {
+            height: 100px;
+            width: 100px;
+        }
+    }
+    .home-banner-title {
+        h2 {
+            font-size: 30px;
+        }
+    }
+    .banner-src {
+        width: 350px;
+    }
+}
 
 @media only screen and (max-width: 414px) {}
 
