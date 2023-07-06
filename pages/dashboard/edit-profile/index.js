@@ -1,5 +1,5 @@
 'use client'
-import React, { Suspense } from 'react'
+import React, { Suspense, useState } from 'react'
 import dynamic from 'next/dynamic';
 
 import smallHeadImg from '@/assets/images/blog.jpg';
@@ -13,11 +13,9 @@ import { menuApi } from '@/service/Menu.service';
 import styles from '@/pages/loader.module.css';
 import Link from 'next/link';
 import { RxDashboard } from 'react-icons/rx';
-import { AiFillEdit } from "react-icons/ai";
-import { RiLockPasswordLine, RiLogoutBoxRLine } from 'react-icons/ri';
-import { FaEnvelope, FaPhone } from 'react-icons/fa6';
-import { BsClipboardCheck, BsStar } from 'react-icons/bs';
-import { FiEdit } from 'react-icons/fi';
+import { RiCloseLine } from 'react-icons/ri';
+import LeftPanel from '@/component/dashboard/LeftPanel';
+import { BsFilterLeft } from 'react-icons/bs';
 
 export async function getStaticProps(context) {
     
@@ -34,6 +32,7 @@ export async function getStaticProps(context) {
   }
 
 export default function editProfilePage({footerData,headerMenuData}) {
+  const [leftMenuHit, setLeftMenuHit] = useState(false);
   return (
     <>
         <Suspense  fallback={ <div className={styles.loader}></div>}>
@@ -42,38 +41,20 @@ export default function editProfilePage({footerData,headerMenuData}) {
             <section>
                 <div className="add-footer-pattern-gap">
                     <div className="front-dashboard-wrap">
-                      <div className="front-dashboard-wrap-lft">
-                        <div className="front-dashboard-menu">
-                          <div className="front-dashboard-menu-box">
-                            <h5>My Account</h5>
-                            <ul>
-                              <li><Link href="#"><RxDashboard /> Dashboard</Link></li>
-                              <li><Link href="#"><AiFillEdit />Edit Profile</Link></li>
-                              <li><Link href="#"><RiLockPasswordLine />Change Password</Link></li>
-                            </ul>
-                          </div>
-                          <div className="front-dashboard-menu-box">
-                            <h5>Tour Booking</h5>
-                            <ul>
-                              <li><Link href="#"><BsClipboardCheck />My Bookings</Link></li>
-                              <li><Link href="#"><BsStar />Reviews</Link></li>
-                            </ul>
-                          </div>
-                          <div className="front-dashboard-menu-box">
-                            <ul className="dasboard-logout">
-                              <li><Link href="#"><RiLogoutBoxRLine />Sign Out</Link></li>
-                            </ul>
-                          </div>
-                          <div className="front-dashboard-need-help">
-                            <h5>Need Help?</h5>
-                            <ul>
-                              <li><Link href="#"><FaPhone />+91 9865321012</Link></li>
-                              <li><Link href="#"><FaEnvelope />Info@HimalayanLeisure.Com</Link></li>
-                            </ul>
-                          </div>
-                        </div>
+                      <div className={`front-dashboard-wrap-lft ${leftMenuHit === true && 'left-open'}`}>
+                      <button className="dashboard-menu d-lg-none"
+                          onClick={() => {
+                            setLeftMenuHit(false);
+                          }}
+                        ><RiCloseLine /></button>
+                          <LeftPanel />
                       </div>
                       <div className="front-dashboard-wrap-rgt">
+                      <button className="dashboard-open-menu d-lg-none"
+                          onClick={() => {
+                            setLeftMenuHit(true);
+                          }}
+                        ><BsFilterLeft /></button>
                         <div className="dasboard-bedcrumb">
                           <ul>
                             <li><Link href="#"><RxDashboard />Dashboard</Link></li>
@@ -91,13 +72,13 @@ export default function editProfilePage({footerData,headerMenuData}) {
                                 <div className="edit-profile-wrap-lft"></div>
                                 <div className="edit-profile-wrap-rgt">
                                     <div className="row g-3">
-                                        <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+                                        <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
                                             <div className="profile-input">
                                                 <label className="profile-lbl">First Name</label>
                                                 <input type="text" className="log-reg-input-style form-control" placeholder="First Name" />
                                             </div>
                                         </div>
-                                        <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+                                        <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
                                             <div className="profile-input">
                                                 <label className="profile-lbl">Last Name</label>
                                                 <input type="text" className="log-reg-input-style form-control" placeholder="Last Name" />
@@ -111,7 +92,7 @@ export default function editProfilePage({footerData,headerMenuData}) {
                                         </div>
                                         <div className="col-12">
                                             <div className="row g-3">
-                                                <div className="col-lg-3 col-md-3 col-sm-12 col-12">
+                                                <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                                     <div className="profile-select">
                                                         <label className="profile-lbl">Day</label>
                                                         <select className="log-reg-select-style form-select">
@@ -121,7 +102,7 @@ export default function editProfilePage({footerData,headerMenuData}) {
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div className="col-lg-3 col-md-3 col-sm-12 col-12">
+                                                <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                                     <div className="profile-select">
                                                         <label className="profile-lbl">Month</label>
                                                         <select className="log-reg-select-style form-select">
@@ -130,7 +111,7 @@ export default function editProfilePage({footerData,headerMenuData}) {
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div className="col-lg-3 col-md-3 col-sm-12 col-12">
+                                                <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                                     <div className="profile-select">
                                                         <label className="profile-lbl">Year</label>
                                                         <select className="log-reg-select-style form-select">
@@ -140,7 +121,7 @@ export default function editProfilePage({footerData,headerMenuData}) {
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div className="col-lg-3 col-md-3 col-sm-12 col-12">
+                                                <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                                     <div className="profile-select">
                                                         <label className="profile-lbl">Gender</label>
                                                         <select className="log-reg-select-style form-select">
@@ -165,6 +146,11 @@ export default function editProfilePage({footerData,headerMenuData}) {
                                                     <option value="">Country 2</option>
                                                 </select>
                                             </div>
+                                        </div>
+                                        <div className="col-12">
+                                          <div className="profile-update-btn">
+                                            <button type="button" className="orange-btn">update profile</button>
+                                          </div>
                                         </div>
                                     </div>
                                 </div>

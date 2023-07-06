@@ -180,19 +180,17 @@ button{
 .menu-top-gap {
     padding-top: 104px;
 }
-.quantity-control {
-    input[type=number]{
-        -moz-appearance: textfield;
-        appearance: textfield;
-        &::-webkit-inner-spin-button,
-        &::-webkit-outer-spin-button{
-            -moz-appearance: none;
-            -ms-appearance: none;
-            -o-appearance: none;
-            -webkit-appearance: none; 
-            appearance: none;
-            margin: 0; 
-        }
+input[type=number]{
+    -moz-appearance: textfield;
+    appearance: textfield;
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button{
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        -webkit-appearance: none; 
+        appearance: none;
+        margin: 0; 
     }
 }
 /*--Sortcode-css Start---*/
@@ -2112,6 +2110,7 @@ button{
         max-width: 150px;
         .profile-image{
             display: block;
+            width: 150px;
             height: 150px;
             border-radius: 12px;
             overflow: hidden;
@@ -2173,13 +2172,35 @@ button{
 .edit-profile-wrap{
     display: flex;
     .edit-profile-wrap-lft{
-        flex: 0 0 250px;
-        max-width: 250px;
+        flex: 0 0 400px;
+        max-width: 400px;
     }
     .edit-profile-wrap-rgt{
-        flex: 0 0 calc(100% - 250px);
-        max-width: calc(100% - 250px); 
+        flex: 1 0; 
     }
+}
+.profile-update-btn{
+    .orange-btn{
+        border: none;
+    }
+}
+.change-password-wrap{
+    max-width: 600px;
+    margin: 0 auto;
+}
+.table-wrap{
+    .table {
+        border: 1px solid #dee2e6;
+        tbody{
+            tr{
+                td{
+                    .tour-title{
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }    
 }
 // Front Dashboard End
 

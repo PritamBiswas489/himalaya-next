@@ -1,5 +1,5 @@
 'use client'
-import React, { Suspense } from 'react'
+import React, { Suspense, useState } from 'react'
 import dynamic from 'next/dynamic';
 
 import smallHeadImg from '@/assets/images/blog.jpg';
@@ -13,11 +13,13 @@ import { menuApi } from '@/service/Menu.service';
 import styles from '@/pages/loader.module.css';
 import Link from 'next/link';
 import { RxDashboard } from 'react-icons/rx';
-import { AiFillEdit } from "react-icons/ai";
-import { RiLockPasswordLine, RiLogoutBoxRLine } from 'react-icons/ri';
-import { FaEnvelope, FaPhone } from 'react-icons/fa6';
-import { BsClipboardCheck, BsStar } from 'react-icons/bs';
+import { RiCloseLine } from 'react-icons/ri';
+import { BsFilterLeft } from 'react-icons/bs';
 import { FiEdit } from 'react-icons/fi';
+
+import LeftPanel from '@/component/dashboard/LeftPanel';
+
+
 
 export async function getStaticProps(context) {
     
@@ -34,6 +36,7 @@ export async function getStaticProps(context) {
   }
 
 export default function dashboardPage({footerData,headerMenuData}) {
+  const [leftMenuHit, setLeftMenuHit] = useState(false);
   return (
     <>
         <Suspense  fallback={ <div className={styles.loader}></div>}>
@@ -41,9 +44,15 @@ export default function dashboardPage({footerData,headerMenuData}) {
             <section className="front-dashboard" style={{  background: `url(${smallHeadImg.src}) center top no-repeat` }}></section>
             <section>
                 <div className="add-footer-pattern-gap">
-                    <div className="front-dashboard-wrap">
-                      <div className="front-dashboard-wrap-lft">
-                        <div className="front-dashboard-menu">
+                    <div className="front-dashboard-wrap">                      
+                      <div className={`front-dashboard-wrap-lft ${leftMenuHit === true && 'left-open'}`}>
+                        <button className="dashboard-menu d-lg-none"
+                          onClick={() => {
+                            setLeftMenuHit(false);
+                          }}
+                        ><RiCloseLine /></button>
+                          <LeftPanel />
+                        {/* <div className="front-dashboard-menu">
                           <div className="front-dashboard-menu-box">
                             <h5>My Account</h5>
                             <ul>
@@ -71,9 +80,14 @@ export default function dashboardPage({footerData,headerMenuData}) {
                               <li><Link href="#"><FaEnvelope />Info@HimalayanLeisure.Com</Link></li>
                             </ul>
                           </div>
-                        </div>
+                        </div> */}
                       </div>
                       <div className="front-dashboard-wrap-rgt">
+                      <button className="dashboard-open-menu d-lg-none"
+                          onClick={() => {
+                            setLeftMenuHit(true);
+                          }}
+                        ><BsFilterLeft /></button>
                         <div className="dasboard-bedcrumb">
                           <ul>
                             <li><Link href="#"><RxDashboard />Dashboard</Link></li>

@@ -1,0 +1,66 @@
+@import '../../assets/css/variable';
+
+.front-dashboard-menu{
+    .front-dashboard-menu-box{
+        h5{
+            padding: 8px 15px;
+            margin-bottom: 0;
+        }
+        ul{
+            li{
+                a{
+                    padding: 12px 15px;
+                    color: $siteGrey;
+                    display: flex;
+                    align-items: center;
+                    font-weight: 500;
+                    svg{
+                        margin-right: 8px;
+                        color: $siteOrage;
+                    }
+                    &:hover{
+                        background-color: #ececec;
+                        color: $siteOrage;
+                    }
+                }
+            }
+            &.dasboard-logout{
+                li{
+                    a{
+                        font-weight: 700;
+                        background-color: #f3f3f3;
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+    .front-dashboard-need-help{
+        h5{
+            padding: 20px 15px 8px 15px;
+            margin-bottom: 0;
+            text-align: center;
+        }
+        ul{
+            li{
+                a{
+                    padding: 6px 15px;
+                    color: $siteGrey;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: 500;
+                    font-size: 13px;
+                    svg{
+                        margin-right: 8px;
+                        fill: $siteOrage;
+                        color: $siteOrage;
+                    }
+                    &:hover{
+                        color: $siteOrage;
+                    }
+                }
+            }
+        }
+    }
+}
