@@ -17,6 +17,9 @@ export function fTimestamp(date) {
 export function fDateTimeSuffix(date) {
   return format(new Date(date), 'dd/MM/yyyy hh:mm p');
 }
+export function fDateTimeSuffix2(date) {
+  return format(new Date(date), 'MM/dd/yyyy');
+}
 
 export function fToNow(date) {
   return formatDistanceToNow(new Date(date), {
@@ -31,4 +34,8 @@ export function fDateYMD(date) {
 export function fDateDMMMY(date) {
   return format(new Date(date), 'dd MMM, yyyy');
 }
+
+
+
+ 
 

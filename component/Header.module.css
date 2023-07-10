@@ -1,0 +1,545 @@
+.orange-btn {
+  border-radius: 30px;
+  height: 46px;
+  line-height: 46px;
+  font-size: 16px;
+  text-transform: capitalize;
+  padding: 0 20px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #f97150;
+}
+.orange-btn:hover {
+  background-color: #444444;
+  color: #fff;
+}
+
+.logo {
+  flex: 0 0 145px;
+  max-width: 145px;
+}
+.logo a {
+  max-width: 120px;
+  transition: all 0.5s ease-in-out;
+}
+
+.account-area {
+  flex: 0 0 245px;
+  max-width: 245px;
+}
+.account-area ul > li {
+  position: relative;
+}
+.account-area ul > li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  position: relative;
+  font-family: "Inter";
+}
+.account-area ul > li a svg {
+  font-size: 15px;
+  margin-right: 10px;
+}
+.account-area ul > li a i {
+  margin-right: 10px;
+}
+.account-area ul > li:not(:last-child) {
+  margin-right: 30px;
+}
+.account-area ul > li .after-login-menu-wrap {
+  position: absolute;
+  right: 0;
+  width: 200px;
+  background: #f6f6f6;
+  top: 150%;
+  padding: 0.5rem 0;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2);
+}
+.account-area ul > li .after-login-menu-wrap ul li a {
+  display: flex;
+  align-items: center;
+  color: #000;
+  font-size: 15px;
+  text-transform: capitalize;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+}
+.account-area ul > li .after-login-menu-wrap ul li a svg {
+  margin-right: 0.5rem;
+}
+.account-area ul > li .after-login-menu-wrap ul li a:hover {
+  color: #f97150;
+}
+.account-area ul > li:hover .after-login-menu-wrap {
+  opacity: 1;
+  visibility: visible;
+}
+
+.main-header {
+  padding: 0.938rem 0;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+}
+.main-header.scroll-on {
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+.main-header.scroll-on .logo a {
+  max-width: 90px;
+}
+.main-header.scroll-on .front-hamburger-wrap {
+  top: 30px;
+}
+
+.navigation {
+  width: 100%;
+  position: relative;
+}
+.navigation ul li {
+  margin: 0 20px;
+  position: relative;
+}
+.navigation ul li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  position: relative;
+  font-family: "Inter";
+}
+.navigation ul li .submenu {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 15px);
+  background: #f6f6f6;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 300ms ease-in-out;
+  z-index: 2;
+  font-family: "Montserrat", sans-serif;
+}
+.navigation ul li:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+}
+.navigation ul li.sub_menu_open > a {
+  position: relative;
+}
+.navigation ul li.sub_menu_open > a::after {
+  position: absolute;
+  content: "\f107";
+  font-family: "Font Awesome 6 free";
+  font-weight: 900;
+  right: -20px;
+}
+
+.submenu-wrap-big {
+  min-width: 800px;
+}
+.submenu-wrap-big .submenu-wrap {
+  display: flex;
+}
+.submenu-wrap-big .submenu-wrap .submenu-wrap-lft {
+  flex: 0 0 200px;
+  max-width: 200px;
+  background-color: #fff;
+  padding: 20px;
+}
+.submenu-wrap-big .submenu-wrap .submenu-wrap-lft ul {
+  width: 100%;
+}
+.submenu-wrap-big .submenu-wrap .submenu-wrap-lft ul li {
+  margin: 0;
+}
+.submenu-wrap-big .submenu-wrap .submenu-wrap-lft ul li a {
+  letter-spacing: 0.00938em;
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+  text-transform: capitalize;
+  padding: 10px 8px;
+  border-radius: 5px;
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+}
+.submenu-wrap-big .submenu-wrap .submenu-wrap-lft ul li a.active, .submenu-wrap-big .submenu-wrap .submenu-wrap-lft ul li a:hover {
+  background-color: #ececec;
+  color: #f97150;
+}
+.submenu-wrap-big .submenu-wrap .submenu-wrap-rgt {
+  flex: 0 0 calc(100% - 200px);
+  max-width: calc(100% - 200px);
+  background-color: #f6f6f6;
+  padding: 20px;
+}
+.submenu-wrap-big .submenu-wrap .submenu-wrap-rgt .plan-tripwrap .orange-btn svg {
+  margin-left: 8px;
+  font-size: 18px;
+}
+
+.nepal-tour-menu {
+  padding-top: 40px;
+}
+.nepal-tour-menu .nepal-tour-menu-wrap-box {
+  display: flex;
+}
+.nepal-tour-menu .nepal-tour-menu-wrap-box .nepal-tour-menu-lft {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.nepal-tour-menu .nepal-tour-menu-wrap-box .nepal-tour-menu-rgt {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.nepal-tour-menu .nepal-tour-menu-wrap-box + .nepal-tour-menu-wrap-box {
+  margin-top: 30px;
+}
+
+.nepal-tour-menu-box h4 {
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+.nepal-tour-menu-box ul li {
+  margin: 0;
+}
+.nepal-tour-menu-box ul li a {
+  font-size: 13px;
+  font-weight: 500;
+  color: #000;
+  text-transform: none;
+  padding: 5px;
+}
+.nepal-tour-menu-box ul li a:hover {
+  background-color: #ececec;
+  color: #f97150;
+}
+
+.submenu-wrap-small {
+  min-width: 500px;
+  padding: 20px;
+}
+.submenu-wrap-small .submenu-wrap-small-box ul li {
+  margin: 0;
+}
+.submenu-wrap-small .submenu-wrap-small-box ul li a {
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
+  text-transform: none;
+  padding: 5px;
+}
+.submenu-wrap-small .submenu-wrap-small-box ul li a:hover {
+  color: #f97150;
+}
+.submenu-wrap-small .submenu-wrap-small-two {
+  display: flex;
+}
+.submenu-wrap-small .submenu-wrap-small-two .submenu-wrap-small-two-lft {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.submenu-wrap-small .submenu-wrap-small-two .submenu-wrap-small-two-rgt {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.submenu-wrap-small .submenu-wrap-small-two .both-small-two-menu h4 {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+.submenu-wrap-small .submenu-wrap-small-two .both-small-two-menu ul li {
+  margin: 0;
+}
+.submenu-wrap-small .submenu-wrap-small-two .both-small-two-menu ul li a {
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
+  text-transform: none;
+  padding: 5px;
+}
+.submenu-wrap-small .submenu-wrap-small-two .both-small-two-menu ul li a:hover {
+  color: #f97150;
+}
+
+@media only screen and (max-width: 1135px) {
+  .front-hamburger-wrap {
+    position: absolute;
+    left: -50px;
+    top: 42px;
+    transition: all 0.5s ease-in-out;
+  }
+  .front-hamburger-wrap .nav-trigger {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+  }
+  .front-hamburger-wrap .nav-trigger span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    transform: rotate(0deg);
+    transition: 0.6s ease-in-out;
+  }
+  .front-hamburger-wrap .nav-trigger span:nth-child(1) {
+    top: 0;
+  }
+  .front-hamburger-wrap .nav-trigger span:nth-child(2), .front-hamburger-wrap .nav-trigger span:nth-child(3) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .front-hamburger-wrap .nav-trigger span:nth-child(4) {
+    bottom: 0;
+  }
+  .front-hamburger-wrap .nav-trigger.active span:nth-child(1) {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  .front-hamburger-wrap .nav-trigger.active span:nth-child(2) {
+    transform: rotate(45deg);
+    transform-origin: center;
+  }
+  .front-hamburger-wrap .nav-trigger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    transform-origin: center;
+  }
+  .front-hamburger-wrap .nav-trigger.active span:nth-child(4) {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  .navigation {
+    display: block;
+    position: fixed;
+    width: 400px;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    height: 100vh;
+    padding: 20px;
+    transform: translateX(100%);
+    transition: all 0.4s ease-in-out;
+    z-index: 1;
+  }
+  .navigation > ul {
+    display: block !important;
+  }
+  .navigation > ul li {
+    margin: 0;
+  }
+  .navigation > ul li > a {
+    color: #000;
+    display: block;
+    padding: 8px 0;
+  }
+  .navigation > ul li.sub_menu_open > a::after {
+    right: 0;
+  }
+  .navigation > ul li.sub_menu_open .submenu {
+    position: static;
+    top: calc(100% + 15px);
+    opacity: 1;
+    visibility: visible;
+    display: none;
+    box-shadow: none;
+  }
+  .navigation > ul li.sub_menu_open.sub-open .submenu {
+    display: block;
+  }
+  .navigation.menu-open {
+    transform: translateX(0);
+  }
+  .submenu-wrap-big {
+    min-width: 100%;
+  }
+  .submenu-wrap-big .submenu-wrap {
+    flex-wrap: wrap;
+    max-height: calc(100vh - 100px);
+    overflow-x: auto;
+  }
+  .submenu-wrap-big .submenu-wrap .submenu-wrap-lft {
+    flex: 0 0 100%;
+    max-width: 100%;
+    background-color: #f6f6f6;
+  }
+  .submenu-wrap-big .submenu-wrap .submenu-wrap-rgt {
+    flex: 0 0 100%;
+    max-width: 100%;
+    background-color: #ebebeb;
+    position: relative;
+  }
+  .submenu-wrap-big .submenu-wrap .submenu-wrap-rgt::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #ebebeb;
+  }
+  .submenu-wrap-small {
+    min-width: 100%;
+  }
+  .submenu-wrap-small .submenu-wrap-small-box > [class*=row-] * {
+    width: 100%;
+  }
+  .submenu-wrap-small .submenu-wrap-small-two {
+    flex-wrap: wrap;
+  }
+  .submenu-wrap-small .submenu-wrap-small-two .submenu-wrap-small-two-lft {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .submenu-wrap-small .submenu-wrap-small-two .submenu-wrap-small-two-rgt {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 15px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .account-area {
+    flex: 0 0 280px;
+    max-width: 280px;
+    padding-right: 40px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .left-right-gap {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .logo {
+    flex: 0 0 120px;
+    max-width: 120px;
+  }
+  .logo a {
+    max-width: 100px;
+  }
+  .front-hamburger-wrap {
+    top: 35px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .logo {
+    flex: 0 0 120px;
+    max-width: 120px;
+  }
+  .logo a {
+    max-width: 90px;
+  }
+  .front-hamburger-wrap {
+    top: 32px;
+  }
+  .main-header.scroll-on .logo a {
+    max-width: 80px;
+  }
+  .main-header.scroll-on .front-hamburger-wrap {
+    top: 30px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .logo {
+    flex: 0 0 90px;
+    max-width: 90px;
+  }
+  .logo a {
+    max-width: 70px;
+  }
+  .front-hamburger-wrap {
+    top: 28px;
+  }
+  .main-header.scroll-on .logo a {
+    max-width: 60px;
+  }
+  .main-header.scroll-on .front-hamburger-wrap {
+    top: 26px;
+  }
+  .account-area {
+    flex: 0 0 240px;
+    max-width: 240px;
+    padding-right: 35px;
+  }
+  .account-area ul li a {
+    font-size: 12px;
+  }
+  .navigation {
+    width: 300px;
+  }
+  .submenu-wrap-big .submenu-wrap .submenu-wrap-rgt .plan-tripwrap .orange-btn {
+    height: auto;
+    line-height: 1.5;
+    padding: 13px 20px;
+    text-align: center;
+  }
+  .submenu-wrap-big .submenu-wrap .submenu-wrap-rgt .plan-tripwrap .orange-btn svg {
+    margin-left: 8px;
+    font-size: 18px;
+  }
+  .nepal-tour-menu {
+    padding-top: 40px;
+  }
+  .nepal-tour-menu .nepal-tour-menu-wrap-box {
+    flex-wrap: wrap;
+  }
+  .nepal-tour-menu .nepal-tour-menu-wrap-box .nepal-tour-menu-lft,
+  .nepal-tour-menu .nepal-tour-menu-wrap-box .nepal-tour-menu-rgt {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .nepal-tour-menu .nepal-tour-menu-wrap-box .nepal-tour-menu-lft + .nepal-tour-menu-lft,
+  .nepal-tour-menu .nepal-tour-menu-wrap-box .nepal-tour-menu-lft + .nepal-tour-menu-rgt,
+  .nepal-tour-menu .nepal-tour-menu-wrap-box .nepal-tour-menu-rgt + .nepal-tour-menu-lft,
+  .nepal-tour-menu .nepal-tour-menu-wrap-box .nepal-tour-menu-rgt + .nepal-tour-menu-rgt {
+    margin-top: 20px;
+  }
+  .nepal-tour-menu .nepal-tour-menu-wrap-box + .nepal-tour-menu-wrap-box {
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .account-area {
+    flex: 0 0 215px;
+    max-width: 215px;
+    padding-right: 23px;
+  }
+  .account-area ul li:not(:last-child) {
+    margin-right: 15px;
+  }
+  .logo {
+    flex: 0 0 75px;
+    max-width: 75px;
+  }
+  .logo a {
+    max-width: 70px;
+  }
+  .front-hamburger-wrap {
+    top: 24px;
+  }
+  .main-header.scroll-on .logo a {
+    max-width: 70px;
+  }
+  .main-header.scroll-on .front-hamburger-wrap {
+    top: 24px;
+  }
+}/*# sourceMappingURL=Header.module.css.map */

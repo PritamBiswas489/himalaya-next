@@ -1,0 +1,46 @@
+.front-dashboard-menu .front-dashboard-menu-box h5 {
+  padding: 8px 15px;
+  margin-bottom: 0;
+}
+.front-dashboard-menu .front-dashboard-menu-box ul li a {
+  padding: 12px 15px;
+  color: #444444;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+.front-dashboard-menu .front-dashboard-menu-box ul li a svg {
+  margin-right: 8px;
+  color: #f97150;
+}
+.front-dashboard-menu .front-dashboard-menu-box ul li a:hover {
+  background-color: #ececec;
+  color: #f97150;
+}
+.front-dashboard-menu .front-dashboard-menu-box ul.dasboard-logout li a {
+  font-weight: 700;
+  background-color: #f3f3f3;
+  margin-top: 15px;
+}
+.front-dashboard-menu .front-dashboard-need-help h5 {
+  padding: 20px 15px 8px 15px;
+  margin-bottom: 0;
+  text-align: center;
+}
+.front-dashboard-menu .front-dashboard-need-help ul li a {
+  padding: 6px 15px;
+  color: #444444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 13px;
+}
+.front-dashboard-menu .front-dashboard-need-help ul li a svg {
+  margin-right: 8px;
+  fill: #f97150;
+  color: #f97150;
+}
+.front-dashboard-menu .front-dashboard-need-help ul li a:hover {
+  color: #f97150;
+}/*# sourceMappingURL=LeftPanel.module.css.map */

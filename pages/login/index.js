@@ -38,7 +38,7 @@ export default function logPage({footerData,headerMenuData}) {
   const [EMAIL_ERROR,SET_EMAIL_ERROR] = useState({isVaild:false,message:''});
   const [PASSWORD_ERROR,SET_PASSWORD_ERROR] = useState({isVaild:false,message:''});
   const [LOADING, SET_LOADING] = useState(false);
-  const [LOGIN_CHECKING, SET_LOGIN_CHECKING] = useState(true);
+  const [LOGIN_CHECKING, SET_LOGIN_CHECKING] = useState(false);
 
   useEffect(() => {
     getSession().then((session) => {

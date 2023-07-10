@@ -4,6 +4,11 @@ const API = axios.create({
   baseURL: process.env.REACT_APP_HOST_API,
 });
 
+const API_PUBLIC = axios.create({
+  baseURL: process.env.NEXT_PUBLIC_REACT_APP_HOST_API,
+});
+
+
 const authApi = {}
 
 authApi.login = async (data) => {
@@ -18,7 +23,7 @@ authApi.login = async (data) => {
 
 authApi.register = async (data) => {
   try {
-    const res = await API.post('signup', data);
+    const res = await API_PUBLIC.post('signup', data);
     return res;
   } catch (error) {
     return error.response;
