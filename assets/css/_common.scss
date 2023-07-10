@@ -2644,6 +2644,106 @@ input[type=number]{
 
 // Faq page End
 
+// Itinery Page Start
+.cancelation-days{
+    display: flex;
+    align-items: center;
+    color: $white;
+    font-size: 16px;
+    margin-top: 25px;
+    svg{
+        color: $siteOrage;
+        margin-right: 0.25rem;
+    }
+}
+.itinery-bnr-btn {
+    li{
+        flex: 1 0;
+        a{
+            display: block;
+        }
+    }
+}
+.itinery-menu-listing-sec{
+    background-color: #ebebeb;
+    padding: 10px 0;
+}
+.itinery-page-menu{
+    display: flex;
+    margin-left: -15px;
+    margin-right: -15px;
+    .itinery-page-menu-lft{
+        flex: 1 0;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .itinery-page-menu-rgt{
+        flex: 0 0 415px;
+        max-width: 415px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+.itinery-menu{
+    ul{
+        display: flex;
+        justify-content: space-between;
+        li{
+            .itinery-menu-item{
+                display: flex;
+                align-items: center;
+                color: $siteGrey;
+                font-weight: 600;
+                padding: 12px 0;
+                position: relative;
+                img{
+                    margin-right: 0.25rem;
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: -10px;
+                    bottom: 0;
+                    background: $siteOrage;
+                    transform: scale(0, 1);
+                    transform-origin: right;
+                    transition: transform 0.4s ease;
+                    height: 2px;
+                    width: calc(100% - 3px);
+                    margin: 0 11px 0 11px;
+                }
+                &:hover,
+                &.active{
+                    &::before {
+                        transform: scale(1, 1);
+                        transform-origin: left;
+                    }
+                }
+            }
+        }
+    }
+}
+.itinery-price-enquary{
+    display: flex;
+    align-items: center;
+    .itinery-price-select{
+        flex: 0 0 210px;
+        max-width: 210px;
+        .enq-price{
+            border: none;
+            background-color: transparent;
+            font-weight: 600;
+            color: $siteGrey;
+            margin-left: 0.25rem;
+        }
+    }
+    .itinery-enquary-btn-wrap{
+        flex: 1 0;
+        padding-left: 15px;
+    }
+}
+// Itinery Page End
+
 
 
 
