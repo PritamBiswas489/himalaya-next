@@ -69,7 +69,30 @@ export default function editProfilePage({footerData,headerMenuData}) {
                           </div>
                           <div className="front-dashboard-base-body">
                             <div className="edit-profile-wrap">
-                                <div className="edit-profile-wrap-lft"></div>
+                                <div className="edit-profile-wrap-lft">
+                                  <div className="img-drop-box">
+                                    <input type="file" placeholder="image" id="bannerImg" accept=".png,.jpeg,.jpg" />
+                                    <label htmlFor="bannerImg" className="img-drop-image">
+                                      <span className="img-drop-text">
+                                        <i className="fa-regular fa-images"></i>
+                                        <p>
+                                          Drag and drop your file here.
+                                          <br /> Or select file to upload
+                                        </p>
+                                      </span>
+                                    </label>
+                                    <div className="img-after-upload">
+                                      <div className="show-img-wrap">
+                                        <img src="https://achishayari.com/wp-content/uploads/2023/04/Cute-DP-Image.webp" alt="" />
+                                      </div>
+                                      <div className="img-drop-delete">
+                                          <button type="button" className="drop-delete-btn">
+                                            <i className="fa-solid fa-xmark"></i>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
                                 <div className="edit-profile-wrap-rgt">
                                     <div className="row g-3">
                                         <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
