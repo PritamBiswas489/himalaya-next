@@ -9,6 +9,7 @@ import "@/component/TopProgressBar.css";
 import dynamic from "next/dynamic";
 import { SnackbarProvider } from "notistack";
 import { SessionProvider } from "next-auth/react";
+import { AuthContextProvider } from "@/store/auth-context";
 const TopProgressBar = dynamic(
   () => {
     return import("component/TopProgressBar");
@@ -28,7 +29,9 @@ export default function App({ Component, pageProps }) {
         autoHideDuration={3000}
       >
         <SessionProvider session={pageProps.session}>
-          <Component {...pageProps} />
+          <AuthContextProvider>
+            <Component {...pageProps} />
+          </AuthContextProvider>
         </SessionProvider>
       </SnackbarProvider>
     </>

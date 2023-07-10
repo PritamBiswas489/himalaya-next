@@ -31,6 +31,7 @@ const ClientSays = dynamic(() => import('@/component/Home/ClientSays'));
 
 export async function getStaticProps(context) {
   const homePage = await pagesApi.home();
+  
   const destination = await destinationApi.list();
   const popularTour = await tourApi.popularTourList();
   const clientSays = await reviewApi.list();

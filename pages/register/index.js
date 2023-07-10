@@ -6,6 +6,7 @@ import Link from "next/link";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useSnackbar } from "notistack";
+import { getSession } from "next-auth/react";
 
 import regBg from "@/assets/images/register.jpg";
 import logRegLogo from "@/assets/images/logo-b.png";
@@ -74,6 +75,20 @@ export default function regPage({ footerData, headerMenuData, countries }) {
     checked: false,
   });
   const [errors, setErrors] = useState({});
+
+
+  const [LOGIN_CHECKING, SET_LOGIN_CHECKING] = useState(false);
+
+  useEffect(() => {
+    getSession().then((session) => {
+      if (session) {
+        router.replace('/dashboard');
+      } else {
+        SET_LOGIN_CHECKING(false);
+      }
+    });
+  }, [router]);
+
   function validateForm(){
     let newErrors = {};
 
@@ -169,6 +184,9 @@ export default function regPage({ footerData, headerMenuData, countries }) {
           }
        
     }
+  }
+  if(LOGIN_CHECKING){
+    return '';
   }
   return (
     <>

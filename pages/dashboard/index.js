@@ -1,6 +1,8 @@
 'use client'
-import React, { Suspense, useState } from 'react'
+import React, { Suspense, useState, useEffect } from 'react'
 import dynamic from 'next/dynamic';
+import { useRouter } from 'next/router';
+import { getSession } from 'next-auth/react';
 
 import smallHeadImg from '@/assets/images/blog.jpg';
 
@@ -21,6 +23,7 @@ import LeftPanel from '@/component/dashboard/LeftPanel';
 
 
 
+
 export async function getStaticProps(context) {
     
     const footerData = await pagesApi.footer();
@@ -36,7 +39,25 @@ export async function getStaticProps(context) {
   }
 
 export default function dashboardPage({footerData,headerMenuData}) {
+  const router = useRouter();
+  const [LOGIN_CHECKING, SET_LOGIN_CHECKING] = useState(true);
+
+  useEffect(() => {
+    getSession().then((session) => {
+      if (!session) {
+        router.replace('/login');
+      } else {
+        SET_LOGIN_CHECKING(false);
+      }
+    });
+  }, [router]);
+   
+
+
   const [leftMenuHit, setLeftMenuHit] = useState(false);
+  if(LOGIN_CHECKING){
+    return '';
+  }
   return (
     <>
         <Suspense  fallback={ <div className={styles.loader}></div>}>

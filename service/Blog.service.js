@@ -1,7 +1,11 @@
 import axios from 'axios';
+import https from 'https';
 
 const API = axios.create({
     baseURL: process.env.REACT_APP_HOST_API,
+    httpsAgent: new https.Agent({
+        rejectUnauthorized: false
+      })
 });
 
 export const blogListService = async (page = 1,cat=0) => {

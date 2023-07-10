@@ -7,7 +7,14 @@ import siteLogo from '@/assets/images/logo.png';
 import { FiArrowRight } from "react-icons/fi";
 
 import { RxDashboard } from 'react-icons/rx';
-import { RiLogoutBoxRLine } from 'react-icons/ri';
+import { BiLogOut } from 'react-icons/bi';
+import { BiLogIn } from 'react-icons/bi';
+import {AiOutlineForm} from 'react-icons/ai';
+ 
+import { getSession } from 'next-auth/react';
+import { signOut } from 'next-auth/react';
+
+
  
 import Link from 'next/link';
 
@@ -37,9 +44,29 @@ const [subMenu2, setMenuOpen2] = useState(false);
 const [subMenu3, setMenuOpen3] = useState(false);
 const [currentMegaMenu,setCurrentMegaMenu] =  useState('');
 
+const [loadingLoginSessionChecking,setLoadingLoginSessionChecking] = useState(true);
+const [isLoggedIn,setIsloggedIn] = useState(true);
+const [checkLoggedIn,setCheckloggedIn] = useState(true);
+
 useEffect(()=>{
    setCurrentMegaMenu(menu.destination[0].slug);
 },[])
+
+
+useEffect(() => {
+  if(checkLoggedIn === true){
+    getSession().then((session) => {
+        if (session) {
+          setIsloggedIn(true);
+        } else {
+          setIsloggedIn(false);
+        }
+        setLoadingLoginSessionChecking(false);
+        setCheckloggedIn(false);
+      });
+  }
+  }, [checkLoggedIn]);
+
 function handleBigMenu(slug){
     setCurrentMegaMenu(slug)
 }
@@ -50,6 +77,15 @@ function chunkArrayInGroups(arr, size) {
     }
     return myArray;
   }
+
+  async function logoutHandler(event){
+    event.preventDefault();
+    const data = await signOut({ redirect: false });
+    setCheckloggedIn(true);
+     
+  }
+
+
   
 
 
@@ -195,25 +231,48 @@ function chunkArrayInGroups(arr, size) {
                 <div className={`${style['account-area']}`}>
                     <ul className="d-flex align-items-center">
                         <li><a href="#"><BsTelephoneFill />{footer?.contact}</a></li>
-                        <li>
+                        {!loadingLoginSessionChecking && (<li>
                             <a href="javascript:;"><FaUserLarge /></a>
                             <div className={`${style['after-login-menu-wrap']}`}>
-                                <ul>
+                               
+                               
+                               
+                               {isLoggedIn ? (<ul>
                                     <li>
-                                        <Link href="#">
+                                        <Link href="/dashboard">
                                             <RxDashboard />
-                                            my dashboard
+                                            My Dashboard
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="#">
-                                            <RiLogoutBoxRLine />
-                                            logout
+                                        <Link href="#" onClick={logoutHandler}>
+                                            <BiLogOut />
+                                            Logout
                                         </Link>
                                     </li>
-                                </ul>
+                                </ul>) : (<ul>
+                                    <li>
+                                        <Link href="/login">
+                                             <BiLogIn />
+                                             Login
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/register">
+                                            <AiOutlineForm />
+                                            Register
+                                        </Link>
+                                    </li>
+
+
+                                    
+                                    
+                                </ul>)}
+                                
                             </div>
-                        </li>
+                        </li>)}
+                        
+                        
                     </ul>
                 </div>
             </div>

@@ -1,11 +1,18 @@
 import axios from 'axios';
+import https from 'https';
 
 const API = axios.create({
   baseURL: process.env.REACT_APP_HOST_API,
+  httpsAgent: new https.Agent({
+    rejectUnauthorized: false
+  })
 });
 
 const API_PUBLIC = axios.create({
   baseURL: process.env.NEXT_PUBLIC_REACT_APP_HOST_API,
+  httpsAgent: new https.Agent({
+    rejectUnauthorized: false
+  })
 });
 
 
