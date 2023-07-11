@@ -16,8 +16,12 @@ const Footer = dynamic(() => import('@/component/Footer'));
 import { pagesApi } from '@/service/Pages.service';
 import { menuApi } from '@/service/Menu.service';
 import styles from '@/pages/loader.module.css';
+import { useAuth } from '@/store/auth-context';
+ 
 
 export async function getStaticProps(context) {
+  
+
     const footerData = await pagesApi.footer();
     const headerMenu = await menuApi.menu();
     
@@ -38,19 +42,18 @@ export default function logPage({footerData,headerMenuData}) {
   const [EMAIL_ERROR,SET_EMAIL_ERROR] = useState({isVaild:false,message:''});
   const [PASSWORD_ERROR,SET_PASSWORD_ERROR] = useState({isVaild:false,message:''});
   const [LOADING, SET_LOADING] = useState(false);
-  const [LOGIN_CHECKING, SET_LOGIN_CHECKING] = useState(true);
+  
+  const authContext = useAuth();
 
-  useEffect(() => {
-    getSession().then((session) => {
-      if (session) {
-        router.replace('/dashboard');
-      } else {
-        SET_LOGIN_CHECKING(false);
-      }
-    });
-  }, [router]);
-   
+  //authContext.initiateLoading();
 
+  console.log(authContext.loading);
+  
+
+  if(authContext.user){
+        router.replace('dashboard');
+  }
+  
   function validateEmail(){
     const email = emailRef.current.value;
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
@@ -85,7 +88,7 @@ export default function logPage({footerData,headerMenuData}) {
           });
           console.log(result);
           if(!result.error){
-            
+            authContext.login();
             enqueueSnackbar('Successfully logged in');
             router.replace('/dashboard');
             SET_LOADING(false);
@@ -95,9 +98,8 @@ export default function logPage({footerData,headerMenuData}) {
           }
      }
   }
-  if(LOGIN_CHECKING){
-    return '';
-  }
+  
+   
   return (
     <>
         <Suspense  fallback={ <div className={styles.loader}></div>}>

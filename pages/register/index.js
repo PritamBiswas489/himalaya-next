@@ -6,7 +6,7 @@ import Link from "next/link";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useSnackbar } from "notistack";
-import { getSession } from "next-auth/react";
+import { useRouter } from "next/router";
 
 import regBg from "@/assets/images/register.jpg";
 import logRegLogo from "@/assets/images/logo-b.png";
@@ -19,6 +19,7 @@ import { authApi } from "@/service/Auth.service";
 
 import styles from "@/pages/loader.module.css";
 import { signIn } from "next-auth/react";
+import { useAuth } from '@/store/auth-context';
 
 
 function dateFormat(date, format) {
@@ -63,6 +64,7 @@ export async function getStaticProps(context) {
 
 export default function regPage({ footerData, headerMenuData, countries }) {
   const { enqueueSnackbar } = useSnackbar();
+  const router = useRouter();
   const [formDataState, setFormDataState] = useState({
     firstName: "",
     lastName: "",
@@ -76,18 +78,11 @@ export default function regPage({ footerData, headerMenuData, countries }) {
   });
   const [errors, setErrors] = useState({});
 
+  const authContext = useAuth();
 
-  const [LOGIN_CHECKING, SET_LOGIN_CHECKING] = useState(false);
-
-  useEffect(() => {
-    getSession().then((session) => {
-      if (session) {
-        router.replace('/dashboard');
-      } else {
-        SET_LOGIN_CHECKING(false);
-      }
-    });
-  }, [router]);
+  if(authContext.user){
+        router.replace('dashboard');
+  }
 
   function validateForm(){
     let newErrors = {};
@@ -185,9 +180,7 @@ export default function regPage({ footerData, headerMenuData, countries }) {
        
     }
   }
-  if(LOGIN_CHECKING){
-    return '';
-  }
+   
   return (
     <>
       <Suspense fallback={<div className={styles.loader}></div>}>

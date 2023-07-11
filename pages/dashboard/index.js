@@ -40,24 +40,14 @@ export async function getStaticProps(context) {
 
 export default function dashboardPage({footerData,headerMenuData}) {
   const router = useRouter();
-  const [LOGIN_CHECKING, SET_LOGIN_CHECKING] = useState(true);
+   
 
-  useEffect(() => {
-    getSession().then((session) => {
-      if (!session) {
-        router.replace('/login');
-      } else {
-        SET_LOGIN_CHECKING(false);
-      }
-    });
-  }, [router]);
+   
    
 
 
   const [leftMenuHit, setLeftMenuHit] = useState(false);
-  if(LOGIN_CHECKING){
-    return '';
-  }
+   
   return (
     <>
         <Suspense  fallback={ <div className={styles.loader}></div>}>

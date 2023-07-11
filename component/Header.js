@@ -13,6 +13,8 @@ import {AiOutlineForm} from 'react-icons/ai';
  
 import { getSession } from 'next-auth/react';
 import { signOut } from 'next-auth/react';
+import { useAuth } from '@/store/auth-context';
+import { useRouter } from 'next/router';
 
 
  
@@ -21,6 +23,11 @@ import Link from 'next/link';
 
 
 const Header = ({menu,footer}) => {
+
+ const router = useRouter();
+const { pathname } = router;
+
+ 
 
     // Sticky Menu Area
 useEffect(() => {
@@ -44,28 +51,16 @@ const [subMenu2, setMenuOpen2] = useState(false);
 const [subMenu3, setMenuOpen3] = useState(false);
 const [currentMegaMenu,setCurrentMegaMenu] =  useState('');
 
-const [loadingLoginSessionChecking,setLoadingLoginSessionChecking] = useState(true);
-const [isLoggedIn,setIsloggedIn] = useState(true);
-const [checkLoggedIn,setCheckloggedIn] = useState(true);
+const authContext = useAuth();
+
+
 
 useEffect(()=>{
    setCurrentMegaMenu(menu.destination[0].slug);
 },[])
 
 
-useEffect(() => {
-  if(checkLoggedIn === true){
-    getSession().then((session) => {
-        if (session) {
-          setIsloggedIn(true);
-        } else {
-          setIsloggedIn(false);
-        }
-        setLoadingLoginSessionChecking(false);
-        setCheckloggedIn(false);
-      });
-  }
-  }, [checkLoggedIn]);
+
 
 function handleBigMenu(slug){
     setCurrentMegaMenu(slug)
@@ -81,8 +76,8 @@ function chunkArrayInGroups(arr, size) {
   async function logoutHandler(event){
     event.preventDefault();
     const data = await signOut({ redirect: false });
-    setCheckloggedIn(true);
-     
+    authContext.logout();
+    router.replace('login');
   }
 
 
@@ -231,13 +226,13 @@ function chunkArrayInGroups(arr, size) {
                 <div className={`${style['account-area']}`}>
                     <ul className="d-flex align-items-center">
                         <li><a href="#"><BsTelephoneFill />{footer?.contact}</a></li>
-                        {!loadingLoginSessionChecking && (<li>
+                         <li>
                             <a href="javascript:;"><FaUserLarge /></a>
                             <div className={`${style['after-login-menu-wrap']}`}>
                                
                                
                                
-                               {isLoggedIn ? (<ul>
+                               {authContext.user ? (<ul>
                                     <li>
                                         <Link href="/dashboard">
                                             <RxDashboard />
@@ -270,7 +265,7 @@ function chunkArrayInGroups(arr, size) {
                                 </ul>)}
                                 
                             </div>
-                        </li>)}
+                        </li> 
                         
                         
                     </ul>

@@ -1,11 +1,14 @@
-import React,{useState, useEffect, useCallback} from "react";
+import React,{useState, useEffect, useCallback, useContext} from "react";
 import { getSession } from "next-auth/react";
+
 
 const AuthContext = React.createContext({
     user:null,
-    loading : false
-    // login:function(){},
-    // logout:function(){}
+    loading : false,
+    login:()=>{},
+    logout:()=>{},
+    
+    
 });
 export const useAuth = () => useContext(AuthContext);
 
@@ -19,25 +22,31 @@ export const AuthContextProvider = (props)=>{
           const session = await getSession();
           if (session) {
             setUser(session.user);
+            setLoading(false);
           }
-          setLoading(false);
+          
         };
     
         fetchData();
       }, []);
 
-    //  const loginHandler = () =>
-    //  {
-    //     setIsLoggedin(true);
-    //  }
-    //  const logoutHandler = () =>
-    //  {
-    //     setIsLoggedin(false);
-    //  }
+
+    const  loginHandler = async () =>{
+      const session = await getSession();
+      if (session) {
+        setUser(session.user);
+      }
+    }
+    const logoutHandler = () =>{
+      setUser(null);
+    }
 
     const contextValue = {
-       user,
-       loading
+      user:user,
+      loading:loading,
+      login:loginHandler,
+      logout:logoutHandler
+     
     }   
     return <AuthContext.Provider value={contextValue}>
      {props.children}
