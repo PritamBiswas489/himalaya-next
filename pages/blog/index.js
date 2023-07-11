@@ -73,6 +73,7 @@ export default function blogPage({footerData,headerMenuData}) {
                                 <div className="blog-box">
                                     <span className="blogimg">
                                         <img className="img-block" src={blogImg1.src} alt="" />
+                                        <span className="blog-author-name">kartick gain</span>
                                     </span>
                                     <div className="bloginfo">
                                         <h4>
@@ -141,8 +142,8 @@ export default function blogPage({footerData,headerMenuData}) {
                     </EqualHeight>
                 </div>
             </section>
-        <Footer data={footerData}></Footer>
-        </Suspense>
+        // <Footer data={footerData}></Footer>
+        // </Suspense>
     </>
   )
 }
