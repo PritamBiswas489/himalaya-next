@@ -712,6 +712,11 @@ input[type=number]{
             color: $black; 
         }
     }
+    &.small-font{
+        h3{
+            font-size: 1.7rem;
+        }
+    }
 }    
   
 // Activity section
@@ -1450,7 +1455,7 @@ input[type=number]{
     height: 100%;
     .inner-banner1-title{
         h3{
-            font-size: 50px;
+            font-size: 40px;
             color: $siteOrage;
             text-transform: capitalize;
             margin-bottom: 0;
@@ -1495,6 +1500,30 @@ input[type=number]{
                 color: $siteGrey;
                 font-size: 25px;
                 margin-bottom: 0;
+            }
+        }
+    }
+    &.contact-page{
+        .mission-vission-wrap-box{
+            .mission-vission-wrap-box-lft{
+                flex: 0 0 50px;
+                max-width: 50px;
+                .mission-vission-icon{
+                    max-width: 50px;
+                    display: block;
+                }
+            }
+            .mission-vission-wrap-box-rgt {
+                padding-left: 25px;
+                h3{
+                    font-size: 22px;
+                    padding-bottom: 5px;
+                }
+                .mission-vission-text{
+                    a{
+                        color: $siteGrey;
+                    }
+                }
             }
         }
     }
@@ -2567,8 +2596,12 @@ input[type=number]{
 
 // Faq page Start
 .quick-navigation-sec {
-    .parallax-wrap {
+    // .parallax-wrap {
+    //     padding: 60px 0 100px 0;
+    // }
+    &.faq-wrap-bg{
         padding: 60px 0 100px 0;
+        background-attachment: fixed;
     }
 }
 .quick-navigation-menu-box{
@@ -2588,6 +2621,7 @@ input[type=number]{
                 font-size: 20px;
                 font-weight: 700;
                 letter-spacing: 1px;
+                padding: 5px 0;
                 &:hover{
                     color: $siteOrage;
                 }
@@ -2731,6 +2765,12 @@ input[type=number]{
                     }
                 }
             }
+            // &:not(:last-child){
+            //     margin-right: 40px;
+            // }
+            &:not(:first-child){
+                margin-right: 60px;
+            }
         }
     }
 }
@@ -2753,7 +2793,107 @@ input[type=number]{
         padding-left: 15px;
     }
 }
+.itinery-details-sec{
+    padding: 50px 0;
+}
+.itinery-alert-box{
+    background-color: #d4edda;
+    color: #155724;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.border-box{
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.feutured-box{
+    display: flex;
+    .feutured-box-lft{
+        flex: 0 0 205px;
+        max-width: 205px;
+        border-right: 1px solid #e1e1e1;
+    }
+    .feutured-box-rgt{
+        flex: 1 0;
+        padding: 15px;
+    }
+}
+.lft-icon-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .lft-icon-box{
+        .lft-icon-base{
+            display: block;
+            text-align: center;
+            padding: 25px 20px;
+            svg{
+                color: $siteOrage;
+                font-size: 50px;
+                margin-bottom: 15px;
+            }
+        }
+        a{
+            background-color: #f6f6f6;
+            &:hover{
+                background-color: $white;
+            }
+        }
+        &:not(:last-child){
+            border-bottom: 1px solid #e1e1e1;
+        }
+    }
+}
+.rgt-icon-wrap{
+    display: flex;
+    .rgt-icon-img{
+        flex: 0 0 60px;
+        max-width: 60px;
+        .lft-icon-img{
+            display: block;
+        }
+    }
+    .rgt-icon-txt{
+        flex: 1 0;
+    }
+}
 // Itinery Page End
+
+// Contact Page Start
+.contact-getin-touch{
+    padding: 40px 0;
+    .section-heading{
+        margin-bottom: 0;
+        h4{
+            padding-bottom: 0;
+        }
+        h3{
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+}
+.contact-map{
+    iframe{
+        height: 500px;
+    }
+}
+.profile-textare{
+    .textare-style{
+        resize: none;
+        border-color: #999;
+        background-color: transparent;
+    }
+}
+.contact-message{
+    .orange-btn{
+        border: none;
+    }
+}
+// Contact Page End
 
 
 

@@ -13,7 +13,6 @@ import { Parallax } from 'react-parallax';
 // Prallax about Banner
 import faqBanner from '@/assets/images/faq/faq.jpeg';
 // Prallax Main Activity
-import faqwrapBg from '@/assets/images/faqpattern.jpg';
 
 
 import Link from 'next/link';
@@ -32,6 +31,14 @@ import memberImg2 from '@/assets/images/about/member/member-img2.png';
 import memberImg3 from '@/assets/images/about/member/member-img3.png';
 import memberImg4 from '@/assets/images/about/member/member-img4.png';
 import memberImg5 from '@/assets/images/about/member/member-img5.png';
+
+// Mission Vission
+import contactIcon1 from '@/assets/images/contact/contact-location.svg';
+import contactIcon2 from '@/assets/images/contact/contact-callus.svg';
+import contactIcon3 from '@/assets/images/contact/contact-emailus.svg';
+import abtImg1 from '@/assets/images/about/abtimg1.jpg';
+import abtImg2 from '@/assets/images/about/abtimg2.jpg';
+import abtImg3 from '@/assets/images/about/abtimg3.jpg';
 
 
 const clientSauSlider = {
@@ -100,6 +107,7 @@ import { Suspense } from 'react';
 import { pagesApi } from '@/service/Pages.service';
 import { menuApi } from '@/service/Menu.service';
 import styles from '@/pages/loader.module.css';
+import { FiArrowRight } from 'react-icons/fi';
     const Header = dynamic(() => import('@/component/Header'));
     const Footer = dynamic(() => import('@/component/Footer'));
   export async function getStaticProps(context) {
@@ -117,7 +125,7 @@ import styles from '@/pages/loader.module.css';
     };
   }
 
-export default function faqPage({footerData,headerMenuData}){
+export default function contactPage({footerData,headerMenuData}){
     return (
         <>
             <Suspense  fallback={ <div className={styles.loader}></div>}>
@@ -129,79 +137,207 @@ export default function faqPage({footerData,headerMenuData}){
                                 <div className="row align-items-center">
                                     <div className="col">
                                         <div className="inner-banner1-title">
-                                            <h3>faq</h3>
-                                            <div className="inner-banner1-text">Frequently Asked Question</div>
+                                            <h3>Contact Us</h3>
+                                            <div className="inner-banner1-text">Get in touch with your queries and questions. We are here 24/7 to answer your queries.</div>
                                         </div>
                                     </div>
-                                    <div className="col-auto">
+                                    {/* <div className="col-auto">
                                         <div className="inner-banner1-btn">
                                             <Link href="#" className="orange-btn">contact us</Link>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
                     </Parallax>
                 </section>
-                <section className="about-page-sec">
+                <section className="mission-visson-sec">
                     <div className="container-fluid left-right-gap">
-                        <div className="row align-items-center">
-                            <div className="col-lg-5 col-md-5 col-sm-12 col-12">
-                                <div className="section-heading section-heading-lft">
-                                    <h4>Checkout</h4>
-                                    <h3>Our Frequently Asked Questions</h3>
+                        <div className="row">
+                            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+                                <div div className="section-heading section-heading-lft small-font">
+                                    <h4>Lorem Ipsum</h4>
+                                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing </h3>
+                                    <div className="section-heading-desc">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet.
+                                    </div>
+                                </div>
+                                <div className="mission-vission-wrap contact-page">
+                                    <div className="mission-vission-wrap-box">
+                                        <div className="mission-vission-wrap-box-lft">
+                                            <span className="mission-vission-icon">
+                                                <img src={contactIcon1.src} className="img-block" alt="" />
+                                            </span>
+                                        </div>
+                                        <div className="mission-vission-wrap-box-rgt">
+                                            <h3>Our Location</h3>
+                                            <div className="mission-vission-text">Thamel Bhagwati Marg <br/>Kathmandu - 26, Nepal</div>
+                                        </div>
+                                    </div>
+                                    <div className="mission-vission-wrap-box">
+                                        <div className="mission-vission-wrap-box-lft">
+                                            <span className="mission-vission-icon">
+                                                <img src={contactIcon2.src} className="img-block" alt="" />
+                                            </span>
+                                        </div>
+                                        <div className="mission-vission-wrap-box-rgt">
+                                            <h3>Call Us</h3>
+                                            <div className="mission-vission-text">+977 (0)1 5515 565 <br/> +977 98510 94155</div>
+                                        </div>
+                                    </div>
+                                    <div className="mission-vission-wrap-box">
+                                        <div className="mission-vission-wrap-box-lft">
+                                            <span className="mission-vission-icon">
+                                                <img src={contactIcon3.src} className="img-block" alt="" />
+                                            </span>
+                                        </div>
+                                        <div className="mission-vission-wrap-box-rgt">
+                                            <h3>Email Us</h3>
+                                            <div className="mission-vission-text">
+                                                <Link href="#">info@himalayanleisure.com</Link>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="col-lg-7 col-md-7 col-sm-12 col-12">
-                                <div className="about-page-text">
-                                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+                                <div className="mission-vission-img-wrap">
+                                    <div className="mission-vission-img1">
+                                        <span className="mission-vission-img1-wrap">
+                                            <img className="img-block" src={abtImg1.src} alt="" />
+                                        </span>
+                                    </div>
+                                    <div className="mission-vission-img2">
+                                        <span className="mission-vission-img2-wrap">
+                                            <img className="img-block" src={abtImg2.src} alt="" />
+                                        </span>
+                                    </div>
+                                    <div className="mission-vission-img3">
+                                        <span className="mission-vission-img3-wrap">
+                                            <img className="img-block" src={abtImg3.src} alt="" />
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section className="quick-navigation-sec faq-wrap-bg" style={{ backgroundImage: `url(${faqwrapBg.src})`}}>
-                    {/* <Parallax bgImage={faqwrapBg.src} strength={500} className="parallax-wrap"> */}
-                        <div className="container-fluid left-right-gap">
-                            <div className="row">
-                                <div className="col-lg-4 col-md-5 col-sm-12 col-12">
-                                    <div className="quick-navigation-menu-box">
-                                        <h2>Quick Navigation</h2>
-                                        <ul>
-                                            <li><Link href="#">Refunnd</Link></li>
-                                            <li><Link href="#">Booking</Link></li>
-                                            <li><Link href="#">Support</Link></li>
-                                        </ul>
+                <section className="contact-getin-touch">
+                    <div className="container-fluid left-right-gap">
+                        <div className="row">
+                            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+                                <div className="contact-map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594654.5043937997!2d81.48972189098741!3d28.376839448773733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995e8c77d2e68cf%3A0x34a29abcd0cc86de!2sNepal!5e0!3m2!1sen!2sin!4v1689079974077!5m2!1sen!2sin" width="100%" height="100%" style={{border: 0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+                                </div>
+                            </div>
+                            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+                                <div className="row">
+                                    <div className="col-12">
+                                        <div className="section-heading">
+                                            <h4>Lorem Ipsum</h4>
+                                            <h3>Get In Touch</h3>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-8 col-md-7 col-sm-12 col-12">
-                                    <div class="faq-src relative">
-                                        <input type="text" class="faq-src-input" placeholder="Search your question.." />
+                                <div className="row g-3">
+                                    <div class="col-12">
+                                        <div class="profile-input">
+                                            <label class="profile-lbl">Name</label>
+                                            <input type="text" class="log-reg-input-style form-control" placeholder="Name" />
+                                        </div>
                                     </div>
-                                    <div className="faq-wrap-box">
-                                        <div className="faq-list">
-                                            <div className="faq-qus active-open">
-                                                <h4>Refunded rules</h4>
-                                            </div>
-                                            <div className="faq-ans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem voluptate excepturi odio? Doloremque autem dolor accusantium laborum vero provident velit minus a. Cupiditate voluptatum quidem eos adipisci. Illum, ducimus fuga.</div>
+                                    <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <div class="profile-input">
+                                            <label class="profile-lbl">Email</label>
+                                            <input type="text" class="log-reg-input-style form-control" placeholder="Email" />
                                         </div>
-                                        <div className="faq-list">
-                                            <div className="faq-qus">
-                                                <h4>Refunded rules</h4>
-                                            </div>
-                                            <div className="faq-ans" style={{display: 'none'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem voluptate excepturi odio? Doloremque autem dolor accusantium laborum vero provident velit minus a. Cupiditate voluptatum quidem eos adipisci. Illum, ducimus fuga.</div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <div class="profile-input">
+                                            <label class="profile-lbl">Phone No</label>
+                                            <input type="text" class="log-reg-input-style form-control" placeholder="Phone No" />
                                         </div>
-                                        <div className="faq-list">
-                                            <div className="faq-qus">
-                                                <h4>Refunded rules</h4>
-                                            </div>
-                                            <div className="faq-ans" style={{display: 'none'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem voluptate excepturi odio? Doloremque autem dolor accusantium laborum vero provident velit minus a. Cupiditate voluptatum quidem eos adipisci. Illum, ducimus fuga.</div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="profile-textare">
+                                            <label class="profile-lbl">Message</label>
+                                            <textarea class="textare-style form-control" rows="4" placeholder="Message"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="contact-message">
+                                            <button type="button" className="orange-btn">Send Message<FiArrowRight /></button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    {/* </Parallax> */}
+                    </div>
+                </section>
+                <section className="about-member-sec">
+                    <div className="container-fluid left-right-gap">
+                        <div className="row justify-content-center">
+                            <div className="col-12">
+                                <div className="section-heading">
+                                <h4>Lorem</h4>
+                                <h3>Service Excellence</h3>
+                                </div>
+                            </div>
+                            <div className="member-slider-wrap">
+                            <OwlCarousel className="owl-theme slider-arrow1" {...aboutServiceSlider}>
+                                <div className="item">
+                                    <div className="service-img-box">
+                                        <span className="service-img-box-img">
+                                            <img src={memberImg1.src} alt="" />
+                                        </span>
+                                    </div>
+                                </div>
+                                <div className="item">
+                                    <div className="service-img-box">
+                                        <span className="service-img-box-img">
+                                            <img src={memberImg2.src} alt="" />
+                                        </span>
+                                    </div>
+                                </div>
+                                <div className="item">
+                                    <div className="service-img-box">
+                                        <span className="service-img-box-img">
+                                            <img src={memberImg3.src} alt="" />
+                                        </span>
+                                    </div>
+                                </div>
+                                <div className="item">
+                                    <div className="service-img-box">
+                                        <span className="service-img-box-img">
+                                            <img src={memberImg4.src} alt="" />
+                                        </span>
+                                    </div>
+                                </div>
+                                <div className="item">
+                                    <div className="service-img-box">
+                                        <span className="service-img-box-img">
+                                            <img src={memberImg5.src} alt="" />
+                                        </span>
+                                    </div>
+                                </div>
+                                <div className="item">
+                                    <div className="service-img-box">
+                                        <span className="service-img-box-img">
+                                            <img src={memberImg1.src} alt="" />
+                                        </span>
+                                    </div>
+                                </div>
+                                <div className="item">
+                                    <div className="service-img-box">
+                                        <span className="service-img-box-img">
+                                            <img src={memberImg2.src} alt="" />
+                                        </span>
+                                    </div>
+                                </div>
+                            </OwlCarousel>
+                            </div>
+                        </div>
+                    </div>
                 </section>
                 <section className="about-client-sec">
                     <div className="container-fluid left-right-gap">

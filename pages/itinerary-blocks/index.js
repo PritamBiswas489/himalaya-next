@@ -5,9 +5,11 @@ import dynamic from 'next/dynamic';
 // Prallax about Banner
 import destinationBanner from '@/assets/images/destination-banner.jpg';
 import Link from 'next/link';
-import { FaRegImages } from 'react-icons/fa6';
+import { FaRegClock, FaRegImages } from 'react-icons/fa6';
 import { BsCameraVideo } from 'react-icons/bs';
 import { HiCheckCircle } from "react-icons/hi";
+import { MdOutlineParagliding } from "react-icons/md";
+import { RiMapPin2Line } from 'react-icons/ri';
 
 
 import itineryIcon1 from '@/assets/images/itinery/overview.png';
@@ -17,6 +19,21 @@ import itineryIcon4 from '@/assets/images/itinery/costing.png';
 import itineryIcon5 from '@/assets/images/itinery/map.png';
 import itineryIcon6 from '@/assets/images/itinery/gearlist.png';
 import itineryIcon7 from '@/assets/images/itinery/faq.png';
+
+import featureImg1 from '@/assets/images/itinery/feature/clock.png';
+import featureImg2 from '@/assets/images/itinery/feature/paragliding.png';
+import featureImg3 from '@/assets/images/itinery/feature/destination.png';
+import featureImg4 from '@/assets/images/itinery/feature/bar-chart.png';
+import featureImg5 from '@/assets/images/itinery/feature/group.png';
+import featureImg6 from '@/assets/images/itinery/feature/accomodation.png';
+import featureImg7 from '@/assets/images/itinery/feature/meeting-point.png';
+import featureImg8 from '@/assets/images/itinery/feature/directions.png';
+import featureImg9 from '@/assets/images/itinery/feature/altitude.png';
+import featureImg10 from '@/assets/images/itinery/feature/dinner.png';
+import featureImg11 from '@/assets/images/itinery/feature/distance.png';
+import featureImg12 from '@/assets/images/itinery/feature/season.png';
+import featureImg13 from '@/assets/images/itinery/feature/hiking.png';
+
 
 import { Suspense } from 'react';
 import { pagesApi } from '@/service/Pages.service';
@@ -146,10 +163,63 @@ export default function itineraryBlocksPage({footerData,headerMenuData}){
                     </div>
                 </div>
             </section>
-            <section className="add-footer-pattern-gap">
+            <section className="itinery-details-sec">
                 <div className="container-fluid left-right-gap">
-                    gfsgsg
+                    <div className="row">
+                        <div className="col-lg-8 col-md-8 col-sm-12 col-12">
+                            <div className="itinery-alert-box">Nepal is open again. Visa on arrival and no quarantine facility is available for fully vaccinated travelers. To be eligible for visa on arrival, one will require a negative Covid-19 PCR report not older than 72 hours at the time of boarding your flight, vaccine completed certificate (14 days must have completed after full dose), hotel booking as per your itinerary (for contact tracing if required) and ccmc.gov.np international arrival form filled up.</div>
+                            <div className="border-box overflow-hidden">
+                                <div className="feutured-box">
+                                    <div className="feutured-box-lft">
+                                        <div className="lft-icon-wrap">
+                                            <div className="lft-icon-box">
+                                                <div className="lft-icon-base">
+                                                    <FaRegClock />
+                                                    {/* <span className="lft-icon-img">
+                                                        <img className="img-block" src={featureImg1.src} alt="" />
+                                                    </span> */}
+                                                    <h4>3 Days</h4>
+                                                </div>
+                                            </div>
+                                            <div className="lft-icon-box">
+                                                <Link href="#" className="lft-icon-base">
+                                                    <MdOutlineParagliding />
+                                                    <h4>Sightseeing</h4>
+                                                </Link>
+                                            </div>
+                                            <div className="lft-icon-box">
+                                                <Link href="#" className="lft-icon-base">
+                                                    <RiMapPin2Line />
+                                                    <h4>Nepal</h4>
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="feutured-box-rgt">
+                                        <div className="row">
+                                            <div className="col-lg-6 col-md-6 col-sm-6 col-12">
+                                                <div className="rgt-icon-wrap">
+                                                    <div className="rgt-icon-img">
+                                                        <span className="lft-icon-img">
+                                                            <img className="img-block" src={featureImg4.src} alt="" />
+                                                        </span>
+                                                    </div>
+                                                    <div className="rgt-icon-txt">
+                                                        <h4>Trip Grade</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-4 col-md-4 col-sm-12 col-12">yuoyou</div>
+                    </div>
                 </div>
+            </section>
+            <section className="add-footer-pattern-gap">
+                <div className="container-fluid left-right-gap">gbndgb</div>
             </section>
             <Footer data={footerData}></Footer>
         </Suspense>
