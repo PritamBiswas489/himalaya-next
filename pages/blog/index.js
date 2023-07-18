@@ -51,6 +51,12 @@ export default function blogPage({footerData,headerMenuData}) {
             <section className="blog-page-sec add-footer-pattern-gap">
                 <div className="container-fluid left-right-gap">
                     <div className="row justify-content-center add-blog-filter">
+                        <div className="col-xl-5 col-lg-7 col-md-8 col-sm-12 col-12">
+                            <div className="blog-page-heading">
+                                <h3>Blog</h3>
+                                <div className="blog-page-heading-text">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown simply dummy text of the printing</div>
+                            </div>
+                        </div>
                         <div className="blog-filter-wrap">
                             <div className="blog-select">
                                 <select className="blog-select-style form-select">
@@ -58,12 +64,6 @@ export default function blogPage({footerData,headerMenuData}) {
                                     <option value=""> Select 2</option>
                                     <option value=""> Select select 3</option>
                                 </select>
-                            </div>
-                        </div>
-                        <div className="col-lg-5 col-md-6 col-sm-12 col-12">
-                            <div className="blog-page-heading">
-                                <h3>Blog</h3>
-                                <div className="blog-page-heading-text">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown simply dummy text of the printing</div>
                             </div>
                         </div>
                     </div>
@@ -142,8 +142,8 @@ export default function blogPage({footerData,headerMenuData}) {
                     </EqualHeight>
                 </div>
             </section>
-        // <Footer data={footerData}></Footer>
-        // </Suspense>
+            <Footer data={footerData}></Footer>
+        </Suspense>
     </>
   )
 }

@@ -53,10 +53,7 @@ const clientSauSlider = {
       600: {
         items: 1,
       },
-      800: {
-        items: 1,
-      },
-      1000: {
+      900: {
         items: 2,
       },
       1300: {
@@ -146,13 +143,13 @@ export default function faqPage({footerData,headerMenuData}){
                 <section className="about-page-sec">
                     <div className="container-fluid left-right-gap">
                         <div className="row align-items-center">
-                            <div className="col-lg-5 col-md-5 col-sm-12 col-12">
+                            <div className="col-lg-5 col-md-12 col-sm-12 col-12">
                                 <div className="section-heading section-heading-lft">
                                     <h4>Checkout</h4>
                                     <h3>Our Frequently Asked Questions</h3>
                                 </div>
                             </div>
-                            <div className="col-lg-7 col-md-7 col-sm-12 col-12">
+                            <div className="col-lg-7 col-md-12 col-sm-12 col-12">
                                 <div className="about-page-text">
                                 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
                                 </div>
@@ -163,8 +160,8 @@ export default function faqPage({footerData,headerMenuData}){
                 <section className="quick-navigation-sec faq-wrap-bg" style={{ backgroundImage: `url(${faqwrapBg.src})`}}>
                     {/* <Parallax bgImage={faqwrapBg.src} strength={500} className="parallax-wrap"> */}
                         <div className="container-fluid left-right-gap">
-                            <div className="row">
-                                <div className="col-lg-4 col-md-5 col-sm-12 col-12">
+                            <div className="row g-3">
+                                <div className="col-lg-4 col-md-4 col-sm-12 col-12">
                                     <div className="quick-navigation-menu-box">
                                         <h2>Quick Navigation</h2>
                                         <ul>
@@ -174,7 +171,7 @@ export default function faqPage({footerData,headerMenuData}){
                                         </ul>
                                     </div>
                                 </div>
-                                <div className="col-lg-8 col-md-7 col-sm-12 col-12">
+                                <div className="col-lg-8 col-md-8 col-sm-12 col-12">
                                     <div class="faq-src relative">
                                         <input type="text" class="faq-src-input" placeholder="Search your question.." />
                                     </div>
@@ -206,14 +203,14 @@ export default function faqPage({footerData,headerMenuData}){
                 <section className="about-client-sec">
                     <div className="container-fluid left-right-gap">
                         <div className="row g-5 justify-content-center">
-                            <div className="col-lg-3 col-md-3 col-sm-12 col-12">
+                            <div className="col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div className="section-heading">
                                 <h4>Checkout</h4>
                                 <h3>What Our <br></br> Client Say</h3>
                                 <div className="section-heading-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</div>
                                 </div>
                             </div>
-                            <div className="col-lg-9 col-md-9 col-sm-12 col-12">
+                            <div className="col-xl-9 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div className="client-say-slider-wrap">
                                     <OwlCarousel className="owl-theme slider-arrow1 disable-arrow" {...clientSauSlider}>
                                         <div className="item">
