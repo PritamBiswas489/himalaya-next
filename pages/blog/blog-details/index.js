@@ -15,36 +15,36 @@ import customerSup2 from '@/assets/images/customersupport/customer-support2.svg'
 import customerSup3 from '@/assets/images/customersupport/customer-support3.svg';
 
 
-// const Header = dynamic(() => import('@/component/Header'));
-// const Footer = dynamic(() => import('@/component/Footer'));
+const Header = dynamic(() => import('@/component/Header'));
+const Footer = dynamic(() => import('@/component/Footer'));
 
-// import { pagesApi } from '@/service/Pages.service';
-// import { menuApi } from '@/service/Menu.service';
-// import styles from '@/pages/loader.module.css';
+import { pagesApi } from '@/service/Pages.service';
+import { menuApi } from '@/service/Menu.service';
+import styles from '@/pages/loader.module.css';
 import { SlCalender } from 'react-icons/sl';
 import Link from 'next/link';
 
 
 
-// export async function getStaticProps(context) {
+export async function getStaticProps(context) {
     
-//     const footerData = await pagesApi.footer();
-//     const headerMenu = await menuApi.menu();
+    const footerData = await pagesApi.footer();
+    const headerMenu = await menuApi.menu();
   
-//     return {
-//       props:{      
-//         footerData : footerData.data.data,
-//         headerMenuData : headerMenu.data.data
-//       },
-//       revalidate: 60,
-//     };
-//   }
+    return {
+      props:{      
+        footerData : footerData.data.data,
+        headerMenuData : headerMenu.data.data
+      },
+      revalidate: 60,
+    };
+  }
 
 export default function blogdetailsPage({footerData,headerMenuData}) {
   return (
     <>
-        {/* <Suspense  fallback={ <div className={styles.loader}></div>}>
-        <Header menu={headerMenuData} footer={footerData}></Header> */}
+        <Suspense  fallback={ <div className={styles.loader}></div>}>
+        <Header menu={headerMenuData} footer={footerData}></Header>
             <section className="blog-banner" style={{  background: `url(${blogDetls.src}) center top no-repeat` }}>
                 <div className="blog-inner-title menu-top-gap">
                     <div className="container-fluid left-right-gap">
@@ -194,8 +194,8 @@ export default function blogdetailsPage({footerData,headerMenuData}) {
                     </div>
                 </div>
             </section>
-        {/* <Footer data={footerData}></Footer>
-        </Suspense> */}
+        <Footer data={footerData}></Footer>
+        </Suspense>
     </>
   )
 }

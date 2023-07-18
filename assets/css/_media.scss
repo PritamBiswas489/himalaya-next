@@ -235,7 +235,11 @@
 @media only screen and (max-width: 1000px) {}
 
 @media only screen and (max-width: 991px) {
-    
+    .blog-inner-title {
+        h2 {
+            font-size: 20px;
+        } 
+    }     
     .best-seller-wrap {
         margin-top: -150px;
     }
@@ -328,7 +332,7 @@
             justify-content: center;
             margin-bottom: 20px;
         }
-    }    
+    }  
 }
 
 @media only screen and (max-width: 767px) {
